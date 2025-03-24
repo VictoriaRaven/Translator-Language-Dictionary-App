@@ -11,6 +11,16 @@ Links:
 
 This Project is a Basic Python GUI application of a Translator-Language-Dictionary-App. This uses the import of Tkinter (GUI: Graphical User Interface) library for Python and the Python Dictionary method through the (language).txt files uploaded. The user can input the english word or vice versa (incuding accents) and then it will translate the language and search for the word based on the user input and laws. I will gradually update this throughout my studies at UMGC.
 
+### Languages Support (Main Language: English)
+- French
+- Spanish
+- Portuguese
+- Italian
+- German
+- Netherlands(Dutch)
+- Polish
+- Ukrainian
+- Russian
 ### Contact
 
 Feel free to pm me (VictoriaRaven) if you want to use my code under a specific license and without needing to fork my repository.
