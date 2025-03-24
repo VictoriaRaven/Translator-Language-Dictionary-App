@@ -1,0 +1,6 @@
+ciao
+addio
+gatto
+cane
+grazie
+per favore
