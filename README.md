@@ -9,7 +9,7 @@ Links:
 
 ## Information
 
-This Project is a Basic Python GUI application of a Translator-Language-Dictionary-App. This uses the import of Tkinter (GUI: Graphical User Interface) library for Python and the Python Dictionary method through the (language).txt files uploaded. The user can input the data and then it will translate the language and search for the word based on the user input and laws. I will gradually update this throughout my studies at UMGC.
+This Project is a Basic Python GUI application of a Translator-Language-Dictionary-App. This uses the import of Tkinter (GUI: Graphical User Interface) library for Python and the Python Dictionary method through the (language).txt files uploaded. The user can input the english word or vice versa (incuding accents) and then it will translate the language and search for the word based on the user input and laws. I will gradually update this throughout my studies at UMGC.
 
 ### Contact
 
@@ -31,6 +31,10 @@ who participated in this project.
 
 ## Acknowledgments
 
+- [Google Scholar](https://scholar.google.com/)
+- [Python Doc](https://docs.python.org/3/)
+- [Wikipedia](https://www.wikipedia.org/)
+- [UMGC Library](https://libguides.umgc.edu/home)
 - [UMGC CS Resources](https://libguides.umgc.edu/c.php?g=316603&p=2114865)
  - Thank you!
  - VictoriaRaven
