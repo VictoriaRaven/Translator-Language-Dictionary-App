@@ -46,6 +46,7 @@ who participated in this project.
 - [Wikipedia](https://www.wikipedia.org/)
 - [UMGC Library](https://libguides.umgc.edu/home)
 - [UMGC CS Resources](https://libguides.umgc.edu/c.php?g=316603&p=2114865)
+- Bradley N. Miller, David L. Ranum, and Julie Anderson, *Python Programming in Context*, 3rd ed., Jones & Bartlett Learning, Oct. 2019. [Online Textbook Available](Available: https://www.oreilly.com/library/view/python-programming-in/9781284175578/.)
  - Thank you!
  - VictoriaRaven
 
