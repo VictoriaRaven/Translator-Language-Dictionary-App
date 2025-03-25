@@ -1,6 +1,13 @@
 import tkinter as tk
 from tkinter import messagebox
 
+# created idea in 2024 and in 2025 modified it
+import ctypes
+# Enable DPI awareness (for high-DPI displays)
+# prevents a Blurry GUI
+if ctypes.windll.shcore.SetProcessDpiAwareness:
+    ctypes.windll.shcore.SetProcessDpiAwareness(1)
+
 # Dictionaries to store translations
 english_to_french = {}  # fr
 french_to_english = {}
