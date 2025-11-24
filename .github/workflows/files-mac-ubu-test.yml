@@ -1,4 +1,4 @@
-name: Check Required Game Files Push/Pull (Mac, Ubu) with Node.js
+name: Check Required Files Push/Pull (Mac, Ubu) with Node.js
 
 on:
   push:
