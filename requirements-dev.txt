@@ -1,0 +1,6 @@
+pytest
+pytest-cov
+unittest2
+flake8
+black
+mypy
