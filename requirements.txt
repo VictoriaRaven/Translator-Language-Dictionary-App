@@ -48,16 +48,24 @@ urllib3
 uvicorn
 yarg
 
-# Windows and MacOS (Darwin) only
-PyAutoGUI; platform_system in ("Windows", "Darwin")
-PyScreeze; platform_system in ("Windows", "Darwin")
-PyGetWindow; platform_system in ("Windows", "Darwin")
-MouseInfo; platform_system in ("Windows", "Darwin")
-PyRect; platform_system in ("Windows", "Darwin")
-pyperclip; platform_system in ("Windows", "Darwin")
-PyMsgBox; platform_system in ("Windows", "Darwin")
+# Windows and MacOS only
+PyAutoGUI; platform_system == "Windows"
+PyAutoGUI; platform_system == "Darwin"
+PyScreeze; platform_system == "Windows"
+PyScreeze; platform_system == "Darwin"
+PyGetWindow; platform_system == "Windows"
+PyGetWindow; platform_system == "Darwin"
+MouseInfo; platform_system == "Windows"
+MouseInfo; platform_system == "Darwin"
+PyRect; platform_system == "Windows"
+PyRect; platform_system == "Darwin"
+pyperclip; platform_system == "Windows"
+pyperclip; platform_system == "Darwin"
+PyMsgBox; platform_system == "Windows"
+PyMsgBox; platform_system == "Darwin"
 
 # Windows only
 comtypes; platform_system == "Windows"
 pypiwin32; platform_system == "Windows"
 pywin32; platform_system == "Windows"
+
