@@ -1,8 +1,12 @@
+# Test tools
 pytest
 pytest-cov
 pytest-mock
-unittest2
+
+# Linting & formatting
 flake8
 black
 isort
+
+# Static typing
 mypy
