@@ -1,3 +1,4 @@
+# Windows and MacOS (Darwin) and Ubuntu only
 annotated-types
 anyio
 bcrypt
@@ -6,7 +7,6 @@ certifi
 charset-normalizer
 click
 colorama
-comtypes
 deep-translator
 distro
 docopt
@@ -18,28 +18,19 @@ httpx-sse
 idna
 jiter
 mcp
-MouseInfo
 numpy
 openai
 openai-agents
 pillow
 pipreqs
-PyAutoGUI
 pydantic
 pydantic-settings
 pydantic_core
 pygame
-PyGetWindow
-PyMsgBox
-pyperclip
-pypiwin32
-PyRect
-PyScreeze
 python-dotenv
 python-multipart
 pyttsx3
 pytweening
-pywin32
 reportlab
 requests
 sniffio
@@ -56,3 +47,17 @@ typing_extensions
 urllib3
 uvicorn
 yarg
+
+# Windows and MacOS (Darwin) only
+PyAutoGUI; platform_system in ("Windows", "Darwin")
+PyScreeze; platform_system in ("Windows", "Darwin")
+PyGetWindow; platform_system in ("Windows", "Darwin")
+MouseInfo; platform_system in ("Windows", "Darwin")
+PyRect; platform_system in ("Windows", "Darwin")
+pyperclip; platform_system in ("Windows", "Darwin")
+PyMsgBox; platform_system in ("Windows", "Darwin")
+
+# Windows only
+comtypes; platform_system == "Windows"
+pypiwin32; platform_system == "Windows"
+pywin32; platform_system == "Windows"
