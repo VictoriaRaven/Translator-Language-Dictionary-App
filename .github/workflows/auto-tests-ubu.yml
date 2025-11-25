@@ -30,7 +30,7 @@ jobs:
           pip install -r requirements-dev.txt
           python -m pip install sphinx numpy>=1.21.0 "Cython>=3.0,<3.1"
 
-      - name: Run all pytests suite with Xvfb (auto-detect video driver) and PulseAudio
+      - name: Run all pytests suite with Xvfb (auto-detect video driver) and PulseAudio in tests
         run: |
           export SDL_AUDIODRIVER=disk  # Use disk-based audio driver
           export PULSE_SERVER=unix:/run/user/1000/pulse/native  # Optional, in case PulseAudio is needed
