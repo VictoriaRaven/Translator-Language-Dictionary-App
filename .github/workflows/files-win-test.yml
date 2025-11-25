@@ -31,8 +31,18 @@ jobs:
               'README.md',
               'requirements-dev.txt',
               'requirements.txt',
-              'main_translator.py',
-              'DejaVuSans/DejaVuSans.ttf'
+              'main-all-in-one/main_translator.py',
+              'DejaVuSans/DejaVuSans.ttf',
+              'admin_panel.py',
+              'algorithms.py',
+              'database.py',
+              'emailer.py',
+              'exports.py',
+              'gui.py',
+              'main.py',
+              'settings.py',
+              'translation.py',
+              'validation.py'     
             ].map(f => f.toLowerCase());
 
             // Get all files in the repo recursively
