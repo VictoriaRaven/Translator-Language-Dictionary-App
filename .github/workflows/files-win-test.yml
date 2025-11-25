@@ -29,8 +29,8 @@ jobs:
 
             const requiredFiles = [
               'README.md',
-              'data/requirements-dev.txt',
-              'data/requirements.txt',
+              'requirements-dev.txt',
+              'requirements.txt',
               'main-all-in-one/main_translator.py',
               'DejaVuSans/DejaVuSans.ttf',
               'admin_panel.py',
