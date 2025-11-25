@@ -1,7 +1,7 @@
 from unittest.mock import MagicMock
 import pytest
 from gui import TranslatorApp
-
+import gui
 @pytest.fixture
 def app(monkeypatch):
     """
@@ -11,6 +11,7 @@ def app(monkeypatch):
     monkeypatch.setattr("tkinter.Tk", MagicMock())
     app = TranslatorApp(test_mode=True)
     #monkeypatch.setattr(app, "mainloop", lambda: None)
-
+    print("DEBUG: gui imported from:", gui.__file__)
     return app
+
 
