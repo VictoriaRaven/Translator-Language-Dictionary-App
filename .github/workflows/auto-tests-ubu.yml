@@ -1,5 +1,5 @@
 ---
-name: Run Unit Tests For Ubuntu with all push
+name: Auto Run Tests For Ubuntu with all push
 
 on:
   push:
