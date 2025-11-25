@@ -10,5 +10,8 @@ def test_export_history_pdf_file_and_return():
     ]
     path = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf").name
     ok, msg = export_history_pdf(path, rows)
-    # function returns (True, None) on success
-    assert ok is True
+    if not ok:
+        print(f"[DEBUG] export_history_pdf failed with message: {msg}")
+    
+    # This assert ensures the test fails if ok is False
+    assert ok is True, f"export_history_pdf returned False: {msg}"
