@@ -62,12 +62,16 @@ def export_history_pdf(path: str, rows, title="Translation History"):
     """
     if REPORTLAB_AVAILABLE:
         try:
+            import os
             from reportlab.pdfbase import pdfmetrics
             from reportlab.pdfbase.ttfonts import TTFont
             # Register the font **once**
-            pdfmetrics.registerFont(
-                TTFont("DejaVu", r"DejaVuSans\DejaVuSans.ttf")
+            # Build an absolute path to the TTF file (works on all OS)
+            FONT_PATH = os.path.join(
+                os.path.dirname(__file__), "DejaVuSans", "DejaVuSans.ttf"
             )
+            pdfmetrics.registerFont(TTFont("DejaVu", FONT_PATH))
+            
             c = canvas.Canvas(path, pagesize=letter)
             width, height = letter
             margin = 40
@@ -88,6 +92,7 @@ def export_history_pdf(path: str, rows, title="Translation History"):
             c.save()
             return True, None
         except Exception as e:
+            print(f"[PDF FONT ERROR] Could not register font: {e}")
             return False, str(e)
 
     else:
