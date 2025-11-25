@@ -32,4 +32,4 @@ jobs:
 
       - name: Run all pytests suite
         run: |
-          python -m pytest -vv --maxfail=1 --disable-warnings
+          python -m pytest tests/ -vv --maxfail=1 --disable-warnings
