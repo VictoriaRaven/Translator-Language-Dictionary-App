@@ -12,6 +12,10 @@ from admin_panel import AdminPanel
 class TranslatorApp(tk.Tk):
     def __init__(self):
         super().__init__()
+        if test_mode:
+            # Hide the GUI so pytest does not open real windows
+            self.master = None
+            self.withdraw()
         self.title("Translator App")
         self.geometry("500x400")
 
