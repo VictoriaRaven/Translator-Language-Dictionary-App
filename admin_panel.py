@@ -6,7 +6,7 @@ from database import *
 from exports import *
 from emailer import *
 from settings import PAGE_SIZE, DEEP_TRANSLATOR_AVAILABLE, TXT_FILES
-
+from spelling import auto_correct
 
 # ----------------- GUI APP -----------------
 class AdminPanel(tk.Toplevel):
@@ -50,7 +50,8 @@ class AdminPanel(tk.Toplevel):
         ttk.Label(top, text="Search:").pack(side="left")
         self.dict_search_entry = ttk.Entry(top, width=40)
         self.dict_search_entry.pack(side="left", padx=6)
-        ttk.Button(top, text="Search", command=self.dict_search).pack(side="left", padx=4)
+        ttk.Button(top, text="SQL Search", command=self.dict_search).pack(side="left", padx=4)
+        ttk.Button(top, text="Algo Search", command=self.dict_algo_search).pack(side="left", padx=4)
         ttk.Button(top, text="Clear", command=self.dict_clear_search).pack(side="left", padx=4)
         ttk.Button(top, text="Import CSV", command=self.import_dictionary_csv).pack(side="right", padx=4)
         ttk.Button(top, text="Export CSV", command=self.export_dictionary_csv).pack(side="right", padx=4)
@@ -75,14 +76,76 @@ class AdminPanel(tk.Toplevel):
         ttk.Button(pag_frame, text="Refresh", command=self.load_dictionary_page).pack(side="right", padx=6)
         self.load_dictionary_page()
 
+    #search
     def dict_search(self):
         self.dict_filter = self.dict_search_entry.get().strip()
+        typed = self.dict_search_entry.get().strip()
+        # Auto-correct spelling before searching
+        corrected = auto_correct(typed)
+        self.dict_search_entry.delete(0, tk.END)
+        self.dict_search_entry.insert(0, corrected)
+        # Use corrected spelling for SQL search
+        self.dict_filter = corrected
         self.dict_page = 0
         try:
             self.dict_page_size = int(self.dict_page_size_var.get())
         except:
             self.dict_page_size = PAGE_SIZE
         self.load_dictionary_page()
+
+    # Add new algo search algo.py
+    def dict_algo_search(self):
+        """Algorithmic search: selection_sort + binary_search, show ALL matching rows."""
+        from algorithms import selection_sort, binary_search
+        target = self.dict_search_entry.get().strip()
+        if not target:
+            messagebox.showerror("Algo Search", "Enter a word to search for.")
+            return
+        # Auto-correct spelling
+        target = auto_correct(target)
+        self.dict_search_entry.delete(0, tk.END)
+        self.dict_search_entry.insert(0, target)
+        # Fetch all dictionary rows
+        rows, total = query_dictionary(
+            filter_text="",
+            order_by="word ASC",
+            limit=None,
+            offset=None
+        )
+        # Extract words
+        words = [row[1] for row in rows]
+        # Sort alphabetically using your algorithm
+        sorted_words = selection_sort(words)
+        # Binary search for first occurrence
+        idx = binary_search(sorted_words, target)
+        if idx == -1:
+            messagebox.showinfo("Algo Search", f"'{target}' was NOT found.")
+            return
+        # Collect ALL duplicate matches (scan left & right)
+        matches = []
+        # scan left
+        i = idx
+        while i >= 0 and sorted_words[i] == target:
+            matches.append(sorted_words[i])
+            i -= 1
+        # scan right
+        i = idx + 1
+        while i < len(sorted_words) and sorted_words[i] == target:
+            matches.append(sorted_words[i])
+            i += 1
+        # Remove duplicates (just in case)
+        matches = list(set(matches))
+        # Now filter SQL results to show ONLY rows with matching words
+        final_rows = [row for row in rows if row[1] in matches]
+        # Display in the existing TreeView
+        for r in self.dict_tree.get_children():
+            self.dict_tree.delete(r)
+        for row in final_rows:
+            self.dict_tree.insert("", "end", values=row)
+        total = len(final_rows)
+        self.dict_status_label.config(
+            text=f"Dictionary(Algo Search): showing 1-{total} of {total}"
+        )
 
     def dict_clear_search(self):
         self.dict_search_entry.delete(0, tk.END)
