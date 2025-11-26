@@ -7,6 +7,9 @@ Links:
 - [GitHub Copyright and Licenses](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
 - [GitHub Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
 
+## 🎥 CS50 Video
+A link will be added after recording the final demonstration, as required by CS50 over here...
+
 ## Information
 
 This Project is a Basic Python GUI application of a Translator-Language-Dictionary-App. This uses the import of Tkinter (GUI: Graphical User Interface) library for Python and the Python Dictionary method through the (language).txt files uploaded. The user can input the english word or vice versa (incuding accents) and then it will translate the language and search for the word based on the user input and laws. I will gradually update this throughout my studies at UMGC. Git will be used for version control, and testing will ensure each component meets requirements. Deliverables include an intuitive GUI, featuring gui translaster app components and, an interactive buttons to export the dicitonary or translation histories as well as wother unique features. The development will be tracked through version control and tested using all types of testing including automated.
@@ -40,51 +43,180 @@ This Project is a Basic Python GUI application of a Translator-Language-Dictiona
     + [User Guide](#user-guide-before-deployment)
   * [**Acknowledgements**](#Acknowledgments)
 
-## CS50 Concepts Integrated
-To connect this project to CS50 foundational computer science concepts, the following topics are utilized or paralleled in the design mentioned below.  The hub also integrates Git for version control to manage the development lifecycle.
-### **Algorithms**
-* Searching through dictionary text files parallels linear search.
-* Potential optimization could mimic binary search.
-### **Data Structures**
-* Python dictionaries replicate CS50's hash table concepts.
-* Text file dictionaries act as key-value lookup tables.
-### **Memory (C Concepts Applied Conceptually)**
-* Input validation parallels buffer-handling and bounds-checking discipline from C.
-* Separation of UI, database, and translation logic reflects memory segmentation thinking.
-### **File I/O**
-* Text dictionary file reading mirrors C's `fopen`, `fgets`, etc.
-* CSV export resembles structured data handling.
-### **APIs and Abstraction**
-* Online translation via `GoogleTranslator` demonstrates API usage similar to CS50’s exploration of libraries.
-* Functions are modular and follow abstraction principles.
-### **Databases (SQL)**
-* This app uses SQLite for logging translations.
-* Connects to CS50’s `SQL` problem sets regarding CRUD operations.
-### **Threading / Concurrency**
-* Background translation threads parallel CS50 discussions on performance and parallelization.
-### **Event-Driven Programming**
-* Tkinter GUI widgets act similar to CS50’s introduction to event-driven models.
-### **Error Handling**
-* Try/except blocks mirror defensive programming emphasized in C.
-## Getting Started — Project-Specific Answers
-Below are the CS50 “Getting Started” questions answered specifically for this Translator‑Language‑Dictionary‑App based on your existing code and README.
-**• What will your software do? What features will it have? How will it be executed?**
-This project is a standalone Python desktop application built with **Tkinter**, **SQLite**, and multiple language dictionary text files. It allows users to translate words between English and several supported languages, search dictionary entries, view translation history, export/import SQL data, paginate results, and optionally use an online translation API via Deep Translator. It runs locally on the user’s computer without requiring a server.
-**• What new skills will you need to acquire? What topics will you need to research?**
-Skills include GUI development with Tkinter, structuring larger Python applications, SQLite relational database design, text‑file parsing, exception handling, pagination algorithms, and integrating external Python modules for translation. Additional research involved CS50 documentation standards, Markdown formatting, and application architecture.
-**• If working with classmates, who will do what?**
-This project is a **solo project**, so all programming, design decisions, UI layout, database construction, translation logic, documentation, and testing were completed by me.
-**• What is a good outcome, better outcome, and best outcome?**
-* **Good outcome:** GUI that loads dictionary files, performs basic translations, and shows results.
-* **Better outcome:** SQLite history database, improved navigation, input validation, CSV/SQL export, multi‑language support.
-* **Best outcome:** Online translation fallback (Deep Translator), full import/export workflows, pagination, refined UI design, extended language support, robust error handling, and polished documentation suitable for CS50’s final project expectations.
-**• Goal milestones to stay on track:**
-1. Set up Tkinter interface and layout.
-2. Load dictionary text files and build the translation logic.
-3. Implement SQLite database for history storage.
-4. Add search tools, pagination, import/export features.
-5. Integrate optional online translation functionality.
-6. Finalize documentation and produce the project demonstration video.
+## 🌐 Overview
+A multi-language offline/online translator built with **Python**, **Tkinter**, **SQLite**, and modular architecture. This project is designed and documented according to **CS50’s 2025 final project expectations**. This desktop application allows users to translate words between English and several supported languages using:
+  - Offline dictionary files  
+  - An SQLite-powered dictionary  
+  - Optional online translation (MyMemory API)  
+  - History logging and export  
+  - A Tkinter-based GUI  
+  - Admin and data-management tools  
+      - The project emphasizes **clean architecture, modularity, abstraction, and error-resistant design**, aligning with core CS50 principles.
+
+## 🖥️ Features
+#### ✔ Offline Dictionary Translation  
+Loads local language dictionaries for immediate lookup.
+#### ✔ Online Translation (Fallback Mode)  
+Queries the MyMemory translation API when local data is insufficient.
+#### ✔ Search, Sorting, and Pagination  
+The dictionary and history pages allow fast navigation even with large datasets.
+#### ✔ SQLite-Backed History Logging  
+Every translation is logged with:
+  - Input word  
+  - Output word  
+  - Language  
+  - Local vs online source  
+  - Timestamp  
+#### ✔ Export Tools  
+Supports:
+  - **JSON export** (full history dump)  
+  - **PDF export** using bundled DejaVu font (UTF-8 safe)
+#### ✔ Email Integration  
+Can open Outlook to send history exports or use a `mailto:` fallback.
+#### ✔ CS50-Friendly Modular Design  
+Separated into modules:
+  - `database.py`  
+  - `translator.py`  
+  - `gui.py`  
+  - `export.py`  
+  - `email_utils.py`  
+
+## 📚 CS50 Concepts Integrated
+To connect this project to CS50 foundational computer science concepts, the following topics are utilized or paralleled in the design mentioned below. The hub also integrates Git for version control to manage the development lifecycle. This project intentionally incorporates a wide range of CS50 foundational concepts. The following list explicitly maps your application’s design and features to CS50’s 2025 curriculum.
+### Algorithms
+  - Searching dictionary entries mirrors linear search.
+  - Sorting and pagination apply selection and ordering techniques.
+  - Selection sort - returns a new sorted list. O(n^2)
+  - Binary search on a sorted list. Returns index or -1. O(log n)
+  - Online/offline fallback mimics decision-based algorithm selection.
+### Data Structures
+  - Python dictionaries and lookups parallel CS50’s hash tables.
+  - SQLite tables (rows, indices) reflect structured storage similar to C structs.
+  - Tuples returned from DB queries mirror fixed-format records.
+### Memory (C-Inspired Concepts Applied in Python)
+  - Input validation is modeled after CS50’s emphasis on safe buffer handling.
+  - Separation of:
+      - GUI  
+      - translation logic  
+      - database logic  
+      - exporter : which resembles stack/heap/code/data segment separation.
+### File I/O
+  - Dictionary text files are parsed similar to C’s `fopen`, `fgets`, and tokenizing.
+  - JSON export demonstrates structured serialization.
+  - PDF creation illustrates writing data into formatted output streams.
+### APIs and Abstraction
+  - MyMemory API usage parallels CS50’s introduction to HTTP and API requests.
+  - Functions such as `translate_online()` encapsulate complexity via abstraction.
+  - Modules interact through clear interface boundaries (CS50-style modularization).
+### Databases (SQL)
+  - Fully uses SQLite with:
+      - `SELECT`, `INSERT`, `UPDATE`, `DELETE`
+      - indices  
+      - pagination via LIMIT/OFFSET  
+  - Directly mirrors CS50 SQL problem sets.
+### Threading / Concurrency
+  - Optional background translation threads mirror CS50 performance discussions.
+  - Preventing UI freeze reflects conceptual concurrency management.
+### Event-Driven Programming
+  - Tkinter relies on an event loop (`mainloop()`), paralleling CS50’s introduction to asynchronous UI design.
+### Error Handling
+  - Try/except blocks are Python’s version of CS50-style defensive programming.
+  - Graceful fallbacks (offline mode → online mode → error message).
+
+## 🚀 CS50 Project Questions Answers
+### What will your software do?  What features will it have? How will it be executed?
+This program is a standalone desktop translator application where it:
+  - Loads local dictionary files  
+  - Uses SQLite for history  
+  - Translates text between multiple languages  
+  - Offers optional online translation  
+  - Allows search, filtering, and pagination  
+  - Exports results to PDF/JSON  
+  - Sends emails with attachments
+  - No server required
+  - It runs by executing: `python main.py`
+### What new skills will you need to acquire?
+  - Tkinter GUI design  
+  - SQL table management and schema design  
+  - Robust modular architecture  
+  - Pagination algorithms  
+  - REST API requests  
+  - Encoding issues (UTF-8 fonts, Russian/Ukrainian support)  
+  - PDF generation with ReportLab  
+  - Error-handling strategies  
+  - Markdown documentation (CS50-style)
+### If working with classmates, who will do what?
+  - This is a solo project.  
+  - All design, programming, testing, documentation, and debugging were completed by me.
+### What is a good outcome, better outcome, and best outcome?
+#### Good Outcome
+  - Basic GUI  
+  - Load dictionary  
+  - Perform translations  
+#### Better Outcome
+  - SQLite history  
+  - Online translation mode  
+  - Search + pagination  
+  - Export functions  
+#### Best Outcome (Achieved)
+  - Offline + online translation pipeline  
+  - PDF + JSON export with UTF-8 fonts  
+  - Admin data tools  
+  - Clean architecture with modular separation  
+  - CS50-conformant documentation and diagrams  
+### Goal Milestones to Stay on Track
+1. Implement Tkinter GUI  
+2. Load dictionary text files  
+3. Add translation logic  
+4. Connect SQLite database  
+5. Implement history + pagination  
+6. Add export and email tools  
+7. Test all modules  
+8. Write documentation + CS50 final video  
+### 🧩 Architecture Summary
+```bash
+
+TranslatorApp (gui.py) → manages windows, tabs, events
+│
+├── main.py # → launches the app (USER MUST RUN HERE)
+├── gui.py # Tkinter GUI (TranslatorApp class)
+├── translator.py # Online translation logic
+├── database.py # SQLite handler
+├── export_json.py # JSON exporter
+├── export_pdf.py # PDF exporter
+├── send_email.py # Email helper
+├── settings.py # Config for API + email
+├── data/
+│ ├── translations.db # SQLite database
+│ └── ...all dictionary texts here!...
+├── DejaVuSans/
+│ └── ...DejaVuSans.ttf
+├── tests/ # Pytest test suite
+│ └──...all test_###.py tests here!...
+
+```
+
+### 📦 Installation
+```bash
+
+pip install -r requirements.txt
+python main.py
+
+```
+  - Make sure DejaVuSans.ttf is placed in the DejaVuSans/ directory for PDF export!
+  - 🎥 CS50 Video: A link will be added after recording the final demonstration, as required by CS50 over here...
+
+### 🏁 Final Notes
+This project is designed to meet — and exceed — the expectations of the CS50 2025 Final Project, demonstrating:
+- Modular design
+- Real-world architecture
+- Practical use of SQL
+- File I/O
+- API usage
+- GUI design
+- Documentation quality
+- Testing Quality
+- SDLC
 
 ## **How to Set Up the Game**
 ### 0. Forking Repository
