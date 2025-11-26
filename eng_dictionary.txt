@@ -1,6 +1,0 @@
-hello
-goodbye
-cat
-dog
-thank you
-please

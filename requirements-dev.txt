@@ -1,6 +1,18 @@
+# Test tools
 pytest
 pytest-cov
-unittest2
+pytest-mock
+
+# Linting & formatting
 flake8
 black
+isort
+
+# Static typing
 mypy
+coverage
+tox
+pre-commit
+
+# Linux-only package for headless GUI testing
+pyvirtualdisplay; sys_platform == "linux"

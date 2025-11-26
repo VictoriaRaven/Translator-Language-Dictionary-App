@@ -1,0 +1,40 @@
+---
+name: Auto Run Tests For Mac with all push
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: macos-latest
+    
+    steps:
+      # Step 1: Checkout the repository codes
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        
+      # Step 2: Install SDL2 (for pygame) 
+      - name: Install SDL2 (for pygame)
+        run: |
+          brew install sdl2 sdl2_image sdl2_mixer sdl2_ttf
+          
+      # Step 3: Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+
+      - name: Run all pytests suite
+        run: |
+          python -m pytest tests/ -vv --maxfail=1 --disable-warnings
