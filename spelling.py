@@ -2,15 +2,12 @@
 #Supports: English-French-Spanish-Portuguese-Italian-Dutch-German-Polish-Russian ONLY
 from functools import lru_cache
 import re
-from typing import Any, Optional
-from language_tool_python.utils import correct
 try:
     import language_tool_python as lt
-    from language_tool_python import utils
+    from language_tool_python import LanguageTool, utils
     LANGUAGE_TOOL_AVAILABLE = True
 except Exception:
     LANGUAGE_TOOL_AVAILABLE = False
-    lt = None
     utils = None
 
 #Supports: ONLY Ukrainian via SymSpell
@@ -20,6 +17,13 @@ try:
     SYM_AVAILABLE = True
 except Exception:
     SYM_AVAILABLE = False
+
+# For auto-detecting input language
+try:
+    from langdetect import detect
+    LANGDETECT_AVAILABLE = True
+except Exception:
+    LANGDETECT_AVAILABLE = False
 
 # Detect Ukrainian letters
 UKRAINIAN_CHARS = re.compile(r"[іІїЇєЄґҐ]")
@@ -43,32 +47,66 @@ class SpellChecker:
     """
 
     def __init__(self):
+        self.tools = {}
         if LANGUAGE_TOOL_AVAILABLE:
-            try:
-                # Load ONCE → slow the first time, fast after
-                self.tool = lt.LanguageTool("multilingual")
-            except Exception:
-                self.tool = None
-        else:
-            self.tool = None
-
-    @lru_cache(maxsize=500)
+            # Preload supported languages (for speed)
+            self.supported_languages = [
+                "en-US", "fr", "es", "pt", "it", "nl", "de", "pl", "ru"
+            ]
+            for lang in self.supported_languages:
+                try:
+                    self.tools[lang] = LanguageTool(lang)
+                except Exception:
+                    continue
+    @lru_cache(maxsize=500)                 
     def correct(self, text: str) -> str:
         """Return corrected text, cached for speed."""
-        if not text or not self.tool:
+        if not text:
+            return text
+
+        # Ukrainian detection
+        if SYM_AVAILABLE and UKRAINIAN_CHARS.search(text) and sym_uk:
+            suggestions = sym_uk.lookup_compound(text, max_edit_distance=2)
+            if suggestions:
+                return suggestions[0].term
+
+        # Auto-detect language if possible
+        lang_to_use = "en-US"  # default fallback
+        if LANGUAGE_TOOL_AVAILABLE and LANGDETECT_AVAILABLE:
+            try:
+                from langdetect import detect
+                detected_lang = detect(text)
+                # Map langdetect codes to LT codes if needed
+                lang_map = {
+                    "en": "en-US",
+                    "fr": "fr",
+                    "es": "es",
+                    "pt": "pt",
+                    "it": "it",
+                    "nl": "nl",
+                    "de": "de",
+                    "pl": "pl",
+                    "ru": "ru",
+                }
+                lang_to_use = lang_map.get(detected_lang, "en-US")
+            except Exception:
+                lang_to_use = "en-US"
+
+        # Use corresponding LanguageTool
+        tool = self.tools.get(lang_to_use)
+        if not tool:
             return text
 
         try:
-            matches = self.tool.check(text)
-            if not matches:
-                return text
-            return utils.correct(text, matches) if utils else text
+            if LANGUAGE_TOOL_AVAILABLE:
+                return tool.correct(text)
         except Exception:
-            # If LanguageTool fails → return original text
             return text
 
+        return text
 
-# GLOBAL instance so admin.py doesn't reload it each time
+
+# Global instance for fast repeated calls
 SPELL_CHECKER = SpellChecker()
 
 
