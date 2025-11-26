@@ -10,7 +10,7 @@ from admin_panel import AdminPanel
 
 # ---------------- Main Application ----------------
 class TranslatorApp(tk.Tk):
-    def __init__(self):
+    def __init__(self, test_mode=False):
         super().__init__()
         if test_mode:
             # Hide the GUI so pytest does not open real windows
