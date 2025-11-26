@@ -18,7 +18,6 @@ httpx-sse
 idna
 jiter
 langdetect
-language-tool-python
 mcp
 numpy
 openai
@@ -72,4 +71,8 @@ PyMsgBox; platform_system == "Darwin"
 comtypes; platform_system == "Windows"
 pypiwin32; platform_system == "Windows"
 pywin32; platform_system == "Windows"
+language-tool-python==2.9.5; sys_platform == "win32"
 
+# macOS and Linux only
+language-tool-python; sys_platform == "darwin"
+language-tool-python; sys_platform == "linux"
