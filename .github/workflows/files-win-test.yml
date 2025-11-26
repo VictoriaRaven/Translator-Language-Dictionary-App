@@ -41,6 +41,7 @@ jobs:
               'gui.py',
               'main.py',
               'settings.py',
+              'spelling.py',
               'translation.py',
               'validation.py'     
             ].map(f => f.toLowerCase());

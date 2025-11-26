@@ -80,6 +80,9 @@ class AdminPanel(tk.Toplevel):
     def dict_search(self):
         self.dict_filter = self.dict_search_entry.get().strip()
         typed = self.dict_search_entry.get().strip()
+        if not typed:
+            messagebox.showerror("SQL Search", "Enter a word to search with SQL.")
+            return
         # Auto-correct spelling before searching
         corrected = auto_correct(typed)
         self.dict_search_entry.delete(0, tk.END)
@@ -99,7 +102,7 @@ class AdminPanel(tk.Toplevel):
         from algorithms import selection_sort, binary_search
         target = self.dict_search_entry.get().strip()
         if not target:
-            messagebox.showerror("Algo Search", "Enter a word to search for.")
+            messagebox.showerror("Algo Search", "Enter a word to search with Algorithms.")
             return
         # Auto-correct spelling
         target = auto_correct(target)
