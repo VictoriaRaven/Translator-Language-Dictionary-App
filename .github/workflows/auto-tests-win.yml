@@ -42,14 +42,7 @@ jobs:
         run: |
           $env:SDL_VIDEODRIVER="dummy"
           $env:SDL_AUDIODRIVER="dummy"
-          python -m pytest -vv --maxfail=1 --disable-warnings ^
-            tests/test_algorithms.py ^
-            tests/test_database.py ^
-            tests/test_email.py ^
-            tests/test_export_json.py ^
-            tests/test_export_pdf.py ^
-            tests/test_translation.py ^
-            tests/test_validation.py
+          python -m pytest -vv --maxfail=1 --disable-warnings tests/test_algorithms.py tests/test_database.py tests/test_email.py tests/test_export_json.py tests/test_export_pdf.py tests/test_translation.py tests/test_validation.py
 
   # 2) UBUNTU JOB (Runs ALL tests with missing: test_gui, test_system, test_integration, test_settings, anything gui/tk/vm tk)
   ubuntu-tests:
