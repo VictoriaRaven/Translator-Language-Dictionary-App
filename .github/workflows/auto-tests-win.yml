@@ -37,14 +37,14 @@ jobs:
           echo "SDL_AUDIODRIVER=dummy" >> $GITHUB_ENV
           echo "PYGAME_HIDE_SUPPORT_PROMPT=1" >> $GITHUB_ENV
 
-      # Run ONLY Windows tests as gitHub dislikes test_gui, test_system, test_integrations, tk, etc.
+      # Run ONLY Windows tests as gitHub dislikes test_gui, test_system, test_integrations, test_translation, etc.
       - name: Run all pytests suite
         run: |
           $env:SDL_VIDEODRIVER="dummy"
           $env:SDL_AUDIODRIVER="dummy"
-          python -m pytest -vv --maxfail=1 --disable-warnings tests/test_algorithms.py tests/test_database.py tests/test_email.py tests/test_export_json.py tests/test_export_pdf.py tests/test_translation.py tests/test_validation.py
+          python -m pytest -vv --maxfail=1 --disable-warnings tests/test_algorithms.py tests/test_database.py tests/test_email.py tests/test_export_json.py tests/test_export_pdf.py tests/test_validation.py
 
-  # 2) UBUNTU JOB (Runs ALL tests with missing: test_gui, test_system, test_integration, test_settings, anything gui/tk/vm tk)
+  # 2) UBUNTU JOB (Runs ALL tests with missing: test_gui, test_system, test_integration, test_settings, test_translation anything gui/tk/vm tk)
   ubuntu-tests:
     name: Ubuntu Full Test Suite
     runs-on: ubuntu-latest
