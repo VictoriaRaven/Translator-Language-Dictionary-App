@@ -17,6 +17,7 @@ httpx
 httpx-sse
 idna
 jiter
+langdetect
 language-tool-python
 mcp
 numpy
