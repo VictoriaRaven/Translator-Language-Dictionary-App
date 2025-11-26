@@ -10,3 +10,9 @@ isort
 
 # Static typing
 mypy
+coverage
+tox
+pre-commit
+
+# Linux-only package for headless GUI testing
+pyvirtualdisplay; sys_platform == "linux"

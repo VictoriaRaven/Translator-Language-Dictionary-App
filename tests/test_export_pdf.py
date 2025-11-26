@@ -1,21 +1,17 @@
-from unittest.mock import patch, MagicMock
 import tempfile
-from yourmodule.export import export_history_pdf
+from exports import export_history_pdf
 
-@patch("yourmodule.export.SimpleDocTemplate")
-@patch("yourmodule.export.Paragraph")
-@patch("yourmodule.export.pdfmetrics")
-@patch("yourmodule.export.UnicodeCIDFont")
-def test_export_history_pdf(mock_font, mock_metrics, mock_para, mock_template):
+def test_export_history_pdf_file_and_return():
+    # Rows must match the tuple structure used by export_history_pdf:
+    # earlier you used r[0], r[5], r[1], r[2], r[3], r[4]
     rows = [
-        (1, "cat", "gato", 0, "now"),
-        (2, "dog", "perro", 1, "now"),
+        (1, "cat", "gato", 0, 1, "2025-11-24 10:00:00"),
+        (2, "dog", "perro", 1, 0, "2025-11-24 10:01:00"),
     ]
-
-    mock_doc = MagicMock()
-    mock_template.return_value = mock_doc
-
     path = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf").name
-    export_history_pdf(rows, path)
-
-    mock_doc.build.assert_called()
+    ok, msg = export_history_pdf(path, rows)
+    if not ok:
+        print(f"[DEBUG] export_history_pdf failed with message: {msg}")
+    
+    # This assert ensures the test fails if ok is False
+    assert ok is True, f"export_history_pdf returned False: {msg}"

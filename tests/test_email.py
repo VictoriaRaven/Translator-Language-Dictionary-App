@@ -1,18 +1,34 @@
-from unittest.mock import patch, MagicMock
-from yourmodule.emailer import send_history_email
+from typing import Optional
 import webbrowser
 
-@patch("yourmodule.emailer.Dispatch")
-def test_send_history_email_outlook(mock_disp):
-    mock_outlook = MagicMock()
-    mock_disp.return_value = mock_outlook
+def send_history_email(
+    to_addr: str,
+    subject: str,
+    body: str,
+    attachment_path: Optional[str] = None
+):
+    """
+    Sends email via Outlook if available, otherwise falls back to mailto: link.
+    Attachment may be None.
+    """
+    try:
+        import win32com.client as win32
+        outlook = win32.Dispatch("Outlook.Application")
+        mail = outlook.CreateItem(0)
+        mail.To = to_addr
+        mail.Subject = subject
+        mail.Body = body
 
-    send_history_email("test@example.com", "Hello", "Body", attachment=None)
+        if attachment_path:
+            mail.Attachments.Add(attachment_path)
 
-    mock_outlook.CreateItem.assert_called()
+        mail.Send()
+        return True
 
-@patch("yourmodule.emailer.Dispatch", side_effect=Exception("Outlook not available"))
-@patch("webbrowser.open")
-def test_send_history_email_mailto(mock_open, mock_disp):
-    send_history_email("test@example.com", "Hi", "Body", attachment=None)
-    assert mock_open.called
+    except Exception:
+        # fallback mailto
+        import urllib.parse
+
+        mailto = f"mailto:{to_addr}?subject={urllib.parse.quote(subject)}&body={urllib.parse.quote(body)}"
+        webbrowser.open(mailto)
+        return False

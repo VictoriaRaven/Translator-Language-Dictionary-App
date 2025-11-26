@@ -416,7 +416,7 @@ class EditDialog(tk.Toplevel):
         self.row_id = row_id
         self.table = table
         self.refresh_callback = refresh_callback
-        self.geometry("420x200")
+        self.geometry("420x220")
         self.transient(master)
         # labels depend on table
         if table == "dictionary":

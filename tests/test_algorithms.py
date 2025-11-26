@@ -1,4 +1,4 @@
-from yourmodule.algorithms import selection_sort, binary_search
+from algorithms import selection_sort, binary_search
 
 def test_selection_sort_basic():
     assert selection_sort([3,1,2]) == [1,2,3]
