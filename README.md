@@ -51,7 +51,7 @@ A multi-language offline/online translator built with **Python**, **Tkinter**, *
   - History logging and export  
   - A Tkinter-based GUI  
   - Admin and data-management tools  
-      - The project emphasizes **clean architecture, modularity, abstraction, and error-resistant design**, aligning with core CS50 principles.
+      - The project emphasizes clean architecture, modularity, abstraction, and error-resistant design, aligning with core CS50 principles.
 
 ## 🖥️ Features
 #### ✔ Offline Dictionary Translation  
@@ -71,6 +71,8 @@ Every translation is logged with:
 Supports:
   - **JSON export** (full history dump)  
   - **PDF export** using bundled DejaVu font (UTF-8 safe)
+  - **Excel(.XLSX)** using UTF-8 safe written file in UTF format
+     - **Note:** EXCEL has a *specific way* of opening the data! Go to the [Tutorial to Import UTF-8 EXCEL Data here](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#tutorial-to-import-utf-8-excel-data). 
 #### ✔ Email Integration  
 Can open Outlook to send history exports or use a `mailto:` fallback.
 #### ✔ CS50-Friendly Modular Design  
@@ -237,11 +239,12 @@ OR
 ```
 This will allow you to download the Zip file or clone the repository successfully. If you have the Zip file extract it onto a Python IDE Directory folder of the new project, but you must have Python installed on your machine.
 ## **2. Options to Run Application**
-- a) Run through a Python IDE
-- b) Run through Python Terminal after setting up the virtual environment
-- c) Run through Python IDE after Forking Repository
+- **a)** [Run through a Python IDE](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#a-a-set-up-pycharm-set-up-a-virtual-environment-install-dependencies-run-application)
+- **b)** [Run through Python Terminal after setting up the virtual environment](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#b-set-up-a-virtual-environment-install-dependencies-run-application)
+- **c)** [Run through Python IDE after Forking Repository](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#c-after-forking-set-up-pycharm-set-up-virtual-environment-install-dependencies-run-application)
 
-### **a. Set up PyCharm, Set up a virtual environment, Install dependencies, Run Application**
+### **a-a. Set up PyCharm, Set up a virtual environment, Install dependencies, Run Application**
+  - If you do not have PyCharm and want to install [VS Code (Visual studio Code) go to a-b](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#a-b-set-up-visual-studio-code-vs-code-set-up-a-virtual-environment-install-dependencies-run-application)
 Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
 Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed PyCharm [Download PyCharm Community for Windows](https://www.jetbrains.com/pycharm/download/?section=windows) OR [Download PyCharm Community for Mac](https://www.jetbrains.com/pycharm/download/?section=mac) OR [Download PyCharm Community for Linux](https://www.jetbrains.com/pycharm/download/?section=linux).
 Then you must open PyCharm:
@@ -252,23 +255,54 @@ Then you must open PyCharm:
   - Extract the Zip files into that folder
   - Open PyCharm again and access the project you created as it should have all the files in the Project
   - 2) This option would be to use the Git clone but you *must* clone it to the new project's directory. See this link: [Git Clone to Project](https://www.jetbrains.com/help/pycharm/set-up-a-git-repository.html#put-existing-project-under-Git)
-  - Next, once Python and Pycharm are set up and installed, you'll need to install the dependencies for the project either through the Python terminal that you installed. Make sure pip is updated. Use these commands to navigate to them and install them:
+  - Next, once Python and Pycharm are set up and installed, you'll need to install the dependencies for the project through the Python terminal that you installed. Make sure pip is updated. Use these commands to navigate to them and install them:
 ```bash
 python.exe -m pip install --upgrade pip
 pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
   - Next, if this does not work, you will have to install the imports one by one by clicking on all the **.py** FILES, and at the top of the imports, click on every imports so that they can be automatically downloaded through PyCharm's Python. Or go to each of them and then type in the Python Packages search bar for each one and install them there.
   - Then once done, **Run** the Python application:
 ```bash
-python MainMenu.py
+python main.py
 ```
-  - OR you could go to the top, double click on the **MainMenu.py** file
+  - OR you could go to the top, double click on the **main.py** file
   - Then go to the top left corner near the arrow run button and click on the **tab** -> **CurrentFile**.
   - Then while staying on that file click on the **Run** button which is the Green Arrow.
 
+### **a-b. Set up Visual Studio Code (VS Code), Set up a virtual environment, Install dependencies, Run Application**
+  - If you do not have VS Code (Visual studio Code) and want to install [PyCharm go to a-a](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#a-a-set-up-pycharm-set-up-a-virtual-environment-install-dependencies-run-application)
+Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
+Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed VS Code [Download VS CODE (DOWNLOADS)](https://code.visualstudio.com/Download).
+Then read the Overview: [VSC Overview](https://code.visualstudio.com/docs/setup/setup-overview).
+Then you must open VS CODE:
+  - INSTALL *all* [**EXTENTIONS for PYTHON + OTHERS**](https://code.visualstudio.com/docs/getstarted/extensions)
+  - SETUP Article VSC based on OS: [Windows VSC](https://code.visualstudio.com/docs/setup/windows)  or [Linux](https://code.visualstudio.com/docs/setup/mac)  or [Linux](https://code.visualstudio.com/docs/setup/linux)
+  - Make a new Project with these instructions: [Create a Python Project (GET STARTED TUTORIAL)](https://code.visualstudio.com/docs/getstarted/getting-started)
+  - Follow all steps including making sure a virtual environment is set up with the Python you installed.
+  - Close the project and exit the application.
+  - Go to the Directory of the project you created
+  - Extract the Zip files into that folder
+  - Open VS Code again and access the project you created as it should have all the files in the Project
+  - 2) This option would be to use the Git clone but you *must* clone it to the new project's directory. See this link: [Git Clone to Project](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)
+  - Next, once Python and VS CODE are set up and installed, you'll need to install the dependencies for the project through the Python terminal that you installed. Make sure pip is updated. Use these commands to navigate to them and install them:
+```bash
+python.exe -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
+```
+  - Next, if this does not work, you will have to install the imports one by one by clicking on all the **.py** FILES, and at the top of the imports, click on every imports so that they can be automatically downloaded through PyCharm's Python. Or go to each of them and then type in the Python Packages search bar for each one and install them there.
+  - Then once done, **Run** the Python application:
+```bash
+python main.py
+```
+  - OR you could go to the top, double click on the **main.py** file
+  - Then go to the top left corner near the **Arrow Run** button and click on the **tab** -> **CurrentFile**.
+  - Then while staying on that file click on the **Run** arrow button.
+
 ### **b. Set up a virtual environment, Install dependencies, Run Application**
 Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
-Once Python is installed, you'll need to install the dependencies for the project either through the Python terminal that you installed. Use these commands to navigate to them and install them:
+Once Python is installed, you'll need to install the dependencies for the project through the Python terminal that you installed. Use these commands to navigate to them and install them:
 ```bash
 cd <directory location where you put the project files>
 [ex: cd D:\Translator-Language-Dictionary-App]
@@ -294,7 +328,9 @@ Run the Python application: After the dependencies are installed, they can simpl
 ```bash
 python main.py
 ```
-### **c. After Forking, Set up PyCharm, Set up virtual environment, Install dependencies, Run Application**
+
+### **c-a. After Forking, Set up PyCharm, Set up virtual environment, Install dependencies, Run Application**
+  - If you do not have PyCharm and want to install [VS Code (Visual studio Code) go to c-b](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#c-b-after-forking-set-up-visual-studio-code-vs-code-set-up-virtual-environment-install-dependencies-run-application)
 Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
 Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed PyCharm [Download PyCharm Community for Windows](https://www.jetbrains.com/pycharm/download/?section=windows) OR [Download PyCharm Community for Mac](https://www.jetbrains.com/pycharm/download/?section=mac) OR [Download PyCharm Community for Linux](https://www.jetbrains.com/pycharm/download/?section=linux).
 Then you must open PyCharm:
@@ -302,10 +338,38 @@ Then you must open PyCharm:
   - Follow all steps including making sure a virtual environment is set up with the Python you installed.
   - Login the Git into the Python and use the Git Clone or fetch the repository of the Forked repository you made. [Forking PyCharm Help](https://www.jetbrains.com/help/pycharm/fork-github-projects.html)
   - 2) This option would be to use the Git clone but you *must* clone it to the new project's directory. See this link: [Git Clone to Project](https://www.jetbrains.com/help/pycharm/set-up-a-git-repository.html#put-existing-project-under-Git)
-  - Next, once Python and Pycharm are set up and installed, you'll need to install the dependencies for the project either through the Python terminal that you installed. Make sure pip is updated. Use these commands to navigate to them and install them:
+  - Next, once Python and Pycharm are set up and installed, you'll need to install the dependencies for the projectthrough the Python terminal that you installed. Make sure pip is updated. Use these commands to navigate to them and install them:
 ```bash
 python.exe -m pip install --upgrade pip
 pip install -r requirements.txt
+pip install -r requirements-dev.txt
+```
+  - Next, if this does not work, you will have to install the imports one by one by clicking on all the **.py** FILES, and at the top of the imports, click on every imports so that they can be automatically downloaded through PyCharm's Python. Or go to each of them and then type in the Python Packages search bar for each one and install them there.
+  - Then once done, **Run** the Python application:
+```bash
+python main.py
+```
+  - OR you could go to the top, double click on the **main.py** file
+  - Then go to the top left corner near the arrow run button and click on the **tab** -> **CurrentFile**.
+  - Then while staying on that file click on the **Run** button which is the Green Arrow.
+
+### **c-b. After Forking, Set up Visual Studio Code (VS Code), Set up virtual environment, Install dependencies, Run Application**
+  - If you do not have VS Code (Visual studio Code) and want to install [PyCharm go to c-a](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#c-a-after-forking-set-up-pycharm-set-up-virtual-environment-install-dependencies-run-application)
+Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
+Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed VS Code [Download VS CODE (DOWNLOADS)](https://code.visualstudio.com/Download).
+Then read the Overview: [VSC Overview](https://code.visualstudio.com/docs/setup/setup-overview).
+Then you must open VS CODE:
+  - INSTALL *all* [**EXTENTIONS for PYTHON + OTHERS**](https://code.visualstudio.com/docs/getstarted/extensions)
+  - SETUP Article VSC based on OS: [Windows VSC](https://code.visualstudio.com/docs/setup/windows)  or [Linux](https://code.visualstudio.com/docs/setup/mac)  or [Linux](https://code.visualstudio.com/docs/setup/linux)
+  - Make a new Project with these instructions: [Create a Python Project](https://www.jetbrains.com/help/pycharm/creating-empty-project.html)
+  - Follow all steps including making sure a virtual environment is set up with the Python you installed.
+  - Login the Git into the Python and use the Git Clone or fetch the repository of the Forked repository you made. [Forking VS Code Help](https://code.visualstudio.com/docs/sourcecontrol/github)
+  - 2) This option would be to use the Git clone but you *must* clone it to the new project's directory. See this link: [Git Clone to Project](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git)
+  - Next, once Python and VS CODE are set up and installed, you'll need to install the dependencies for the project through the Python terminal that you installed. Make sure pip is updated. Use these commands to navigate to them and install them:
+```bash
+python.exe -m pip install --upgrade pip
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
 ```
   - Next, if this does not work, you will have to install the imports one by one by clicking on all the **.py** FILES, and at the top of the imports, click on every imports so that they can be automatically downloaded through PyCharm's Python. Or go to each of them and then type in the Python Packages search bar for each one and install them there.
   - Then once done, **Run** the Python application:
@@ -353,9 +417,22 @@ python main.py
 - The user can Refresh the database manually if the user modified data
 - The user can allow 10,220,50, or 100 entries to appear in the dicitonary
 - The user can go to the Next or Prev pages of the dicitonary database
+- [Tutorial to Import UTF-8 EXCEL Data here](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#tutorial-to-import-utf-8-excel-data). 
 ### Exit
 - Select the X red button on the GUI
 - It will Exit the Translation Application GUI and exit the Python Application.
+
+## Tutorial to Import UTF-8 EXCEL Data
+### OPEN EXCEL
+- Click on ```Excel``` to open it by itself (blank file)
+- Select ```Blank Workbook```
+- Click on ```Data``` tab
+- Select ```From Text/CSV``` on the left side inside Data tab
+- Go to the directory with your ```database.db``` file that was exported
+- Select the file to import it
+- Make sure have these **Settings =>**  ``` File Origin: 65001:Unicode(UTF-8)``` ; ``` Delimiter: Commma```; ``` Data Type Detection Row: Based on the first 200 rows```
+- Then click ```load`` to finalize the imported data
+- It should have all formats correctly converted since the file is in UTF format
 
 ## History of Translation Machines
 ### Wikipedia's Historical Context Short Summary
@@ -366,7 +443,9 @@ python main.py
 - In the 2000s, MT expanded into speech translation and broad-domain content.
 - From 2014 onward, neural machine translation (NMT) revolutionized the field, enabling high-quality, fluent, context-aware translation—the foundation of modern tools like Google Translate and DeepL.
 ### How it's related to my Translation Applicaiton?
-- My Translation Applicaiton is a simple multi-language GUI translator built with Python that supports both online and local translation methods by using a database like SQL(sqlite). It uses a dictionary-style approach, can connect to a free online API like Google Translate, and allows users to translate words or phrases across many languages and offers local support by importing in dicitonary .txt files to add to the SQL (sqlite) database. The app handles Unicode fonts for languages such as lanauges that need support like Cyrillic which lets users maintain and export a history of translated words, and provides a clean interface for entering text, viewing results, editing data, and saving data.
+- My Translation Applicaiton is a simple multi-language GUI translator built with Python that supports both online and local translation methods by using a database like SQL(sqlite).
+- It uses a dictionary-style approach, can connect to a free online API like Google Translate, and allows users to translate words or phrases across many languages and offers local support by importing in dicitonary .txt files to add to the SQL (sqlite) database.
+- The app handles Unicode fonts for languages such as lanauges that need support like Cyrillic which lets users maintain and export a history of translated words, and provides a clean interface for entering text, viewing results, editing data, and saving data.
 ### More History Details?
 - Refer to the History links at the top of the **README.md** file.
 - It will send you hyperlinks to a Wikipedia page of the whole history behind it per each topic.
@@ -411,51 +490,71 @@ This project uses Git for version control. Git will be used to track the progres
 - Go to [https://github.com/VictoriaRaven/Translator-Language-Dictionary-App](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App)
 - Go to Actions Tab
 - If Workflow is Disabled, Enable it
-- Click on the Workflow [1) Run Unit Tests For Mac with all push; Run Unit Tests For Windows with all push; Run Unit Tests For Ubuntu with all push ]
+- Click on the Workflow [1) Auto Run Tests For Mac with all push; Auto Run Tests For Windows with all push; Auto Run Tests For Ubuntu with all push ]
 - Go to the right side of “This workflow has a workflow_dispatch event trigger.”
 - Click on Run Workflow
 - Make sure it’s on Main branch (the .yml files autoruns on separate branches even if run through main)
 - Click Run Workflow (green to confirm)
 - Refresh the page to see the GitHub Action process and if green it passes
-- Environments runs (Win, Mac, Linux), but Ubuntu has glitches due to Git’s ongoing issue.
-- Now Repeat Steps (1-10) ONLY if you want to test out the old test.py with 13 unit tests. 
-- On step 4 choose these workflows: [ Run Unit Tests For Mac with all push; Run Unit Tests For Windows with all push; Run Unit Tests For Ubuntu with all push ]
-- Command line, terminal or PowerShell steps: 
-- Download the code from GitHub in the “main” branch of folder containing tests/((all test .py files here...)). Refer to README.md for help.
-- Navigate to the project directory
-- Ensure installation of dependencies through the requirements.txt and requirements-dev.txt like shown in README.md
-- Run python -m test.py
+- Environments runs (Win, Mac, Linux), but Windows for this tk(gui python) has glitches due to Git’s ongoing issue.
 2) **Testing in IDE**:
 - Download the code from GitHub in the “main” branch. 
 - Open IDE and open the project from where it was saved
 - Install all needed libraries (IDE should prompt to do this automatically)
-- Select the tests/((all test .py files here...)).
-- Run all of the .py tests in the directory of "tests/((all test .py files here...))"
+- Go to the /tests/ directory with cd
+```bash
+D:// cd tests
+```
+- Run all of the .py tests in the directory of "tests/...all test .py files here..." (Works for WIN; MAC; UBU)
+```bash
+D:// ... directory of the project...
+python -m pytest
+```
+- To Run a sigle .py test in the directory do:
+```bash
+D:// ... directory of the project...
+python -m pytest tests/test_algorithms.py
+```
+- If it does not work go to main root with ```cd```
+- Run all of the .py tests again in the root directory of project imported (Works for WIN; MAC; UBU)
+```bash
+D:// ... directory of the project...
+python -m pytest
+```
 3) **Test Data preparation**:
 - Testing will be done through the “main” branch of the GitHub, test.py.
 - Manual Testing will be done through the “main” and other branches.
-- All test files should be located in: tests/((all test .py files here...))
-- All dictionary .txt files and translations.db (SQL) database should be in the directory: data/((all the txt files and .db here...))
-- The requirments.txt and requirements-dev.txt are in the root directory
+- All test files should be located in: ```tests/...all test .py files here..." (Works for WIN; MAC; UBU)```
+- All ```lang_dictionary.txt``` files and ```translations.db (SQL)``` database should be in the directory: ```data/...all data files here..." (Works for WIN; MAC; UBU)```
+- The ```requirments.txt``` and ```requirements-dev.txt``` are in the root directory
 - All workflows located in the github actions workflows as well as the security bot.
 4) **Test Environment Configuration**:
 - Operating System: Windows, macOS, or Linux
 - Python Version: 3.9 or later
 - Terminal Tools: Command line, PowerShell, terminal, or IDE
-- Required Libraries: requirements-dev.txt (all are in this file)
+- Required Libraries: ```requirments.txt``` and ```requirements-dev.txt``` are in the root directory (all are in this file)
 - Audio: Ensure audio output is enabled to validate sound-related tests.
 - Display: Use a resolution of at least 600x400 for consistent rendering.
 - GitHub Actions:  Required you have access to the Repository and can go to the Actions tab
 0) **Manual Testing.xlsx (Manual Testing):**
-- Go to the docs to find a copy of the Excel sheet/ table for manual testing. 
-- Or Go to the docs in unit 5 to get the link to the Excel sheet / table for manual testing.
-- This is Manual Tests using the Excel method
+- Go to the docs to find a copy of the Excel/Sheets/table for manual testing. 
+- Or Go to the docs in to get the link to the Excel/Sheets/table for manual testing.
+- This is Manual Tests using the Excel/Sheets/table method
 1) **Steps/Procedures**:
 - Command line, terminal or PowerShell steps: 
-- Download the code from GitHub in the “main” branch of folder containing tests/((all test .py files here...)). Refer to README.md for help.
+- Download the code from GitHub in the “main” branch of folder containing ```tests/...all test .py files here..." (Works for WIN; MAC; UBU)```. Refer to README.md for help.
 - Navigate to the project directory
-- Ensure installation of dependencies through the requirements.txt and requirements-dev.txt like shown in README.md
-- Run python -m test.py (rest of files...)
+- Ensure installation of dependencies through the ```requirments.txt``` and ```requirements-dev.txt`` like shown in README.md
+- Run a sigle .py test in the directory of "tests/...all test .py files here..." (Works for WIN; MAC; UBU)
+```bash
+D:// ... directory of the project...
+python -m pytest tests/test_algorithms.py
+```
+- Run all of the .py tests in the directory of "tests/...all test .py files here..." (Works for WIN; MAC; UBU)
+```bash
+D:// ... directory of the project...
+python -m pytest
+```
 - From there test each linked .py sections
 - Follow the steps provided in the Manual Testing.xlsx file
 - For each test Perform the Input/Action
@@ -466,28 +565,41 @@ This project uses Git for version control. Git will be used to track the progres
 - Download the code from GitHub in the “main” branch. 
 - Open IDE and open the project from where it was saved
 - Install all needed libraries (IDE should prompt to do this automatically)
-- Select the tests/((all test .py files here...)).
-- Run all of the .py tests in the directory of "tests/((all test .py files here...))"
+- Go to the /tests/ directory with cd
+```bash
+D:// cd tests
+```
+- Run all of the .py tests in the directory of "tests/...all test .py files here..." (Works for WIN; MAC; UBU)
+```bash
+D:// ... directory of the project...
+python -m pytest
+```
+- If it does not work go to main root with ```cd```
+- Run all of the .py tests again in the root directory of project imported (Works for WIN; MAC; UBU)
+```bash
+D:// ... directory of the project...
+python -m pytest
+```
 3) **Test Data preparation**:
 - Testing will be done through the “main” branch of the GitHub, test.py.
 - Manual Testing will be done through the “main” and other branches.
-- All test files should be located in: tests/((all test .py files here...))
-- All dictionary .txt files and translations.db (SQL) database should be in the directory: data/((all the txt files and .db here...))
-- The requirments.txt and requirements-dev.txt are in the root directory
+- All test files should be located in: ```tests/...all test .py files here..." (Works for WIN; MAC; UBU)```
+- All ```lang_dictionary.txt``` files and ```translations.db (SQL)``` database should be in the directory: ```data/...all data files here..." (Works for WIN; MAC; UBU)```
+- The ```requirments.txt``` and ```requirements-dev.txt``` are in the root directory
 - All workflows located in the github actions workflows as well as the security bot.
 4) **Test Environment Configuration**:
 - Operating System: Windows, macOS, or Linux
 - Python Version: 3.9 or later
 - Terminal Tools: Command line, PowerShell, terminal, or IDE
-- Required Libraries: requirements-dev.txt (all are in this file)
+- Required Libraries: ```requirments.txt``` and ```requirements-dev.txt``` are in the root directory (all are in this file)
 - Audio: Ensure audio output is enabled to validate sound-related tests.
 - Display: Use a resolution of at least 600x400 for consistent rendering.
 - GitHub Actions:  Required you have access to the Repository and can go to the Actions tab
 #### Testing Overview:
-Automated testing was implemented using Python’s import frameworks to validate critical components of the other .py modules. Once unit-level verification is complete, the process will move into integration testing to ensure smooth interaction between components, including menu navigation, game transitions, and audio/visual responses. System testing will follow, simulating real-world usage scenarios to confirm that the application performs reliably under typical and extreme conditions. Lastly, acceptance testing will be performed to validate that all project requirements have been met and the application aligns with stakeholder expectations. Testing outcomes will be documented in detail, and any issues uncovered will be addressed through a feedback loop prior to final deployment. This structured approach ensures a thorough and sequential validation of the system’s readiness for delivery. Through the testing approach, we will also use the software engineering techniques of unit Testing to ensure that each part is tested and debugged correctly.
+Automated testing was implemented using Python’s import frameworks to validate critical components of the other .py modules. Once verification is complete, the process will move into integration testing to ensure smooth interaction between components, including menu navigation, addtional features, and CS50's integraiton of lessons learned. System testing will follow, simulating real-world usage scenarios to confirm that the application performs reliably under typical and extreme conditions. Lastly, acceptance testing will be performed to validate that all project requirements have been met and the application aligns with stakeholder expectations. Testing outcomes will be documented in detail, and any issues uncovered will be addressed through a feedback loop prior to final deployment. This structured approach ensures a thorough and sequential validation of the system’s readiness for delivery. Through the testing approach, we will also use the software engineering techniques of Testing to ensure that each part is tested and debugged correctly.
 - **Next Phase Testing (Breakdown)**:
   - Future testing will follow the Waterfall/Agile methodology, starting after full system implementation.
-  - **Unit Testing**: Verify core functionalities (AI decisions, answer validation, collision detection).
+  - **Auto-Testing**: Verify core functionalities (AI decisions, answer validation, collision detection).
   - **Integration Testing**: Ensure smooth interaction between components (menu navigation, game transitions, audio/visual responses).
   - **System Testing**: Simulate real-world scenarios to confirm reliability under typical and extreme conditions.
   - **Acceptance/Manual Testing**: Validate that all project requirements are met and align with stakeholder expectations.
@@ -515,7 +627,7 @@ The activity diagram shows the flow of actions, starting from the application la
 ## Overview of Unit 1-8 Progress Conclusion
 ### Project Plan Goals:
 - Develop a application
-- Use a modular design for easy maintenance and future game additions.
+- Use a modular design for easy maintenance and future gui/tk additions.
 - Integrate version control with Git and implement testings for component verification.
 - Follow the Waterfall/Agile development model for structured project phases.
 ### Project Design Goals:
@@ -539,7 +651,7 @@ The activity diagram shows the flow of actions, starting from the application la
 - Conduct acceptance testing to confirm the application meets all project requirements and stakeholder expectations.
 ### User Guide (Before Deployment):
 - Develop a clear and concise **User Guide** detailing how to navigate the Game Hub.
-- Provide instructions for starting the application, selecting games, and using UI features (e.g., scoreboards, game controls).
+- Provide instructions for starting the application, selecting the buttons, dicitonary, serach, pages/exports/imports, and using UI features.
 - Include troubleshooting tips, known issues, and any additional features or options available
 - Refer to the docs folder section to access our User Guide version.
 - Link is here: [User Guide][(https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/docs)
@@ -550,25 +662,14 @@ The activity diagram shows the flow of actions, starting from the application la
 - Monitor post-deployment performance and user feedback for future updates.
 
 ### Contact
-
 Feel free to pm me (VictoriaRaven) if you want to use my code under a specific license and without needing to fork my repository.
-
 ## Contributing
-
 Please read [CONTRIBUTING.md](README.md) for details on our code
 of conduct, and the process for submitting pull requests to me.
-
 ## Authors
-
-  - **Victoria Lee** - *provided by the README* -
-    [VictoriaRaven](https://github.com/VictoriaRaven)
-
-See also the list of
-[contributors](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md)
-who participated in this project.
-
+  - **Victoria Lee** - [VictoriaRaven](https://github.com/VictoriaRaven)
+  - See also the list of [contributors](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md) who participated in this project.
 ## Acknowledgments
-
 - [Google Scholar](https://scholar.google.com/)
 - [Python Doc](https://docs.python.org/3/)
 - [GeeksforGeeks SDLC Waterfall Model](https://www.geeksforgeeks.org/software-development-life-cycle-sdlc/)
