@@ -1,36 +1,16 @@
 # ---------------- CS50 Modifications based on lessons--------------
 import json
-# Try optional libs (graceful fallbacks)
-try:
-    import bcrypt
-    BCRYPT_AVAILABLE = True
-except Exception:
-    BCRYPT_AVAILABLE = False
-
 try:
     from reportlab.lib.pagesizes import letter
     from reportlab.pdfgen import canvas
     REPORTLAB_AVAILABLE = True
 except Exception:
     REPORTLAB_AVAILABLE = False
-
 try:
     import language_tool_python
     LANGUAGE_TOOL_AVAILABLE = True
 except Exception:
     LANGUAGE_TOOL_AVAILABLE = False
-
-try:
-    import pyttsx3
-    TTS_AVAILABLE = True
-except Exception:
-    TTS_AVAILABLE = False
-
-try:
-    import speech_recognition as sr
-    STT_AVAILABLE = True
-except Exception:
-    STT_AVAILABLE = False
 
 # ---------------- Export: JSON & PDF ----------------
 def export_history_json(path: str, rows):
