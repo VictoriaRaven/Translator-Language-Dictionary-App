@@ -16,7 +16,7 @@ jobs:
     steps:
       # Step 1: Checkout the repository codes
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         
       # Step 2: Install SDL2 (for pygame) 
       - name: Install SDL2 (for pygame)
