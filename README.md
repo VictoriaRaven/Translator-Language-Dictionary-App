@@ -10,7 +10,7 @@ Links:
 ## 🎥 CS50 Video
 A link will be added after recording the final demonstration, as required by CS50 over here...
 
-## Information
+## ⚠️ Important Notice
 
 This Project is a Basic Python GUI application of a Translator-Language-Dictionary-App. This uses the import of Tkinter (GUI: Graphical User Interface) library for Python and the Python Dictionary method through the (language).txt files uploaded. The user can input the english word or vice versa (incuding accents) and then it will translate the language and search for the word based on the user input and laws. I will gradually update this throughout my studies at UMGC. Git will be used for version control, and testing will ensure each component meets requirements. Deliverables include an intuitive GUI, featuring gui translaster app components and, an interactive buttons to export the dicitonary or translation histories as well as wother unique features. The development will be tracked through version control and tested using all types of testing including automated.
 
@@ -47,43 +47,68 @@ This Project is a Basic Python GUI application of a Translator-Language-Dictiona
 A multi-language offline/online translator built with **Python**, **Tkinter**, **SQLite**, and modular architecture. This project is designed and documented according to **CS50’s 2025 final project expectations**. This desktop application allows users to translate words between English and several supported languages using:
   - Offline dictionary files  
   - An SQLite-powered dictionary  
-  - Optional online translation (MyMemory API)  
+  - Optional online translation (Free version Google API translator)  
   - History logging and export  
   - A Tkinter-based GUI  
   - Admin and data-management tools  
       - The project emphasizes clean architecture, modularity, abstraction, and error-resistant design, aligning with core CS50 principles.
 
-## 🖥️ Features
-#### ✔ Offline Dictionary Translation  
+## ✦ Features
+#### ✦ Offline Dictionary Translation  
 Loads local language dictionaries for immediate lookup.
-#### ✔ Online Translation (Fallback Mode)  
+#### ✦ Online Translation (Fallback Mode)  
 Queries the MyMemory translation API when local data is insufficient.
-#### ✔ Search, Sorting, and Pagination  
+#### ✦ Search, Sorting, and Pagination  
 The dictionary and history pages allow fast navigation even with large datasets.
-#### ✔ SQLite-Backed History Logging  
+#### ✦ SQLite-Backed History Logging  
 Every translation is logged with:
   - Input word  
   - Output word  
   - Language  
   - Local vs online source  
   - Timestamp  
-#### ✔ Export Tools  
+#### Export Tools  
 Supports:
   - **JSON export** (full history dump)  
   - **PDF export** using bundled DejaVu font (UTF-8 safe)
   - **Excel(.XLSX)** using UTF-8 safe written file in UTF format
      - **Note:** EXCEL has a *specific way* of opening the data! Go to the [Tutorial to Import UTF-8 EXCEL Data here](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#tutorial-to-import-utf-8-excel-data). 
-#### ✔ Email Integration  
+#### Email Integration  
 Can open Outlook to send history exports or use a `mailto:` fallback.
-#### ✔ CS50-Friendly Modular Design  
-Separated into modules:
-  - `database.py`  
-  - `translator.py`  
-  - `gui.py`  
-  - `export.py`  
-  - `email_utils.py`  
+#### CS50-Friendly Modular Design  
+- ✦ **Separated into modules:**
+```bash
 
-## 📚 CS50 Concepts Integrated
+TranslatorApp (gui.py) → manages windows, tabs, events
+│
+├── admin_panel.py # features of dictionary history settings tab in gui
+├── algorithms.py # Selection and Binary Search/Sort
+├── database.py # SQLite handler
+├── emailer.py # Email export helper
+├── exports.py # JSON-PDF-EXCEL exporter
+├── gui.py # Tkinter GUI (TranslatorApp class)
+├── main.py # → launches the app (USER MUST RUN HERE)
+├── requirements-dev.txt #pip for req pack/imports tests
+├── requirements.txt # pip for req pack/imports
+├── settings.py  # Config for API + email
+├── spelling.py # Grammar and Spelling check translation
+├── translation.py # Online translation logic
+├── validation.py # validates inputs to not exceed boundaries
+├── data/
+│ ├── translations.db # SQLite database
+│ └── ...all-dictionary...
+├── DejaVuSans/ # font for utf-8 ru and ukr
+│ └── ...DejaVuSans.ttf
+├── docs/ # all the plans-reports-docs
+│ └── ...file.pdf
+│ └── ...file.docx
+│ └── ...file.xlsx
+├── tests/ # Pytest test suite
+│ └──...all-test_.py...
+
+```
+
+## CS50 Concepts Integrated
 To connect this project to CS50 foundational computer science concepts, the following topics are utilized or paralleled in the design mentioned below. The hub also integrates Git for version control to manage the development lifecycle. This project intentionally incorporates a wide range of CS50 foundational concepts. The following list explicitly maps your application’s design and features to CS50’s 2025 curriculum.
 ### Algorithms
   - Searching dictionary entries mirrors linear search.
@@ -125,27 +150,28 @@ To connect this project to CS50 foundational computer science concepts, the foll
   - Try/except blocks are Python’s version of CS50-style defensive programming.
   - Graceful fallbacks (offline mode → online mode → error message).
 
-## 🚀 CS50 Project Questions Answers
+## ❓ CS50 Project Questions Answers
 ### What will your software do?  What features will it have? How will it be executed?
-This program is a standalone desktop translator application where it:
-  - Loads local dictionary files  
-  - Uses SQLite for history  
-  - Translates text between multiple languages  
-  - Offers optional online translation  
-  - Allows search, filtering, and pagination  
-  - Exports results to PDF/JSON  
-  - Sends emails with attachments
-  - No server required
-  - It runs by executing: `python main.py`
+  - **1) This program is a standalone desktop translator application where it:**
+     - Loads local dictionary files  
+     - Uses SQLite for history  
+     - Translates text between multiple languages  
+  - **2) Features:**
+     - Offers optional online translation  
+     - Allows search, filtering, and pagination  
+     - Exports results to PDF/JSON/Excel(.XLSX - UTF-8 format)
+     - Sends emails with attachments
+     - No server required
+  - **3) It runs by executing:** `python main.py`
 ### What new skills will you need to acquire?
-  - Tkinter GUI design  
-  - SQL table management and schema design  
-  - Robust modular architecture  
-  - Pagination algorithms  
-  - REST API requests  
+  - Tkinter GUI design  (python knowledge; including cs50 file open/reader lessons)
+  - SQL table management and schema design  (cs50's sql intro)
+  - Strong software architecture (SLDC: docs and tests folder for more details) 
+  - Data structure and algorithms (Selection and Binary)
+  - REST API requests  (Google Free / CS50)
   - Encoding issues (UTF-8 fonts, Russian/Ukrainian support)  
-  - PDF generation with ReportLab  
-  - Error-handling strategies  
+  - PDF generation with ReportLab  (python)
+  - Error-handling strategies  (coding practices)
   - Markdown documentation (CS50-style)
 ### If working with classmates, who will do what?
   - This is a solo project.  
@@ -162,7 +188,7 @@ This program is a standalone desktop translator application where it:
   - Export functions  
 #### Best Outcome (Achieved)
   - Offline + online translation pipeline  
-  - PDF + JSON export with UTF-8 fonts  
+  - PDF + JSON + Excel(.XLSX - UTF-8 format) + (maybe email) export with UTF-8 fonts  
   - Admin data tools  
   - Clean architecture with modular separation  
   - CS50-conformant documentation and diagrams  
@@ -175,30 +201,39 @@ This program is a standalone desktop translator application where it:
 6. Add export and email tools  
 7. Test all modules  
 8. Write documentation + CS50 final video  
-### 🧩 Architecture Summary
+### Architecture Summary
 ```bash
 
 TranslatorApp (gui.py) → manages windows, tabs, events
 │
-├── main.py # → launches the app (USER MUST RUN HERE)
-├── gui.py # Tkinter GUI (TranslatorApp class)
-├── translator.py # Online translation logic
+├── admin_panel.py # features of dictionary history settings tab in gui
+├── algorithms.py # Selection and Binary Search/Sort
 ├── database.py # SQLite handler
-├── export_json.py # JSON exporter
-├── export_pdf.py # PDF exporter
-├── send_email.py # Email helper
-├── settings.py # Config for API + email
+├── emailer.py # Email export helper
+├── exports.py # JSON-PDF-EXCEL exporter
+├── gui.py # Tkinter GUI (TranslatorApp class)
+├── main.py # → launches the app (USER MUST RUN HERE)
+├── requirements-dev.txt #pip for req pack/imports tests
+├── requirements.txt # pip for req pack/imports
+├── settings.py  # Config for API + email
+├── spelling.py # Grammar and Spelling check translation
+├── translation.py # Online translation logic
+├── validation.py # validates inputs to not exceed boundaries
 ├── data/
 │ ├── translations.db # SQLite database
-│ └── ...all dictionary texts here!...
-├── DejaVuSans/
+│ └── ...all-dictionary...
+├── DejaVuSans/ # font for utf-8 ru and ukr
 │ └── ...DejaVuSans.ttf
+├── docs/ # all the plans-reports-docs
+│ └── ...file.pdf
+│ └── ...file.docx
+│ └── ...file.xlsx
 ├── tests/ # Pytest test suite
-│ └──...all test_###.py tests here!...
+│ └──...all-test_.py...
 
 ```
 
-### 📦 Installation
+### Installation
 ```bash
 
 pip install -r requirements.txt
@@ -208,7 +243,7 @@ python main.py
   - Make sure DejaVuSans.ttf is placed in the DejaVuSans/ directory for PDF export!
   - 🎥 CS50 Video: A link will be added after recording the final demonstration, as required by CS50 over here...
 
-### 🏁 Final Notes
+### Final Notes
 This project is designed to meet — and exceed — the expectations of the CS50 2025 Final Project, demonstrating:
 - Modular design
 - Real-world architecture
@@ -245,9 +280,8 @@ This will allow you to download the Zip file or clone the repository successfull
 
 ### **a-a. Set up PyCharm, Set up a virtual environment, Install dependencies, Run Application**
   - If you do not have PyCharm and want to install [VS Code (Visual studio Code) go to a-b](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#a-b-set-up-visual-studio-code-vs-code-set-up-a-virtual-environment-install-dependencies-run-application)
-Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
-Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed PyCharm [Download PyCharm Community for Windows](https://www.jetbrains.com/pycharm/download/?section=windows) OR [Download PyCharm Community for Mac](https://www.jetbrains.com/pycharm/download/?section=mac) OR [Download PyCharm Community for Linux](https://www.jetbrains.com/pycharm/download/?section=linux).
-Then you must open PyCharm:
+  - Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/). Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed PyCharm [Download PyCharm Community for Windows](https://www.jetbrains.com/pycharm/download/?section=windows) OR [Download PyCharm Community for Mac](https://www.jetbrains.com/pycharm/download/?section=mac) OR [Download PyCharm Community for Linux](https://www.jetbrains.com/pycharm/download/?section=linux).
+  - Then you must open PyCharm:
   - Make a new Project with these instructions: [Create a Python Project](https://www.jetbrains.com/help/pycharm/creating-empty-project.html)
   - Follow all steps including making sure a virtual environment is set up with the Python you installed.
   - Close the project and exit the application.
@@ -272,10 +306,8 @@ python main.py
 
 ### **a-b. Set up Visual Studio Code (VS Code), Set up a virtual environment, Install dependencies, Run Application**
   - If you do not have VS Code (Visual studio Code) and want to install [PyCharm go to a-a](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#a-a-set-up-pycharm-set-up-a-virtual-environment-install-dependencies-run-application)
-Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
-Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed VS Code [Download VS CODE (DOWNLOADS)](https://code.visualstudio.com/Download).
-Then read the Overview: [VSC Overview](https://code.visualstudio.com/docs/setup/setup-overview).
-Then you must open VS CODE:
+  - Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/). Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed VS Code [Download VS CODE (DOWNLOADS)](https://code.visualstudio.com/Download). Then read the Overview: [VSC Overview](https://code.visualstudio.com/docs/setup/setup-overview).
+  - Then you must open VS CODE:
   - INSTALL *all* [**EXTENTIONS for PYTHON + OTHERS**](https://code.visualstudio.com/docs/getstarted/extensions)
   - SETUP Article VSC based on OS: [Windows VSC](https://code.visualstudio.com/docs/setup/windows)  or [Linux](https://code.visualstudio.com/docs/setup/mac)  or [Linux](https://code.visualstudio.com/docs/setup/linux)
   - Make a new Project with these instructions: [Create a Python Project (GET STARTED TUTORIAL)](https://code.visualstudio.com/docs/getstarted/getting-started)
@@ -331,9 +363,8 @@ python main.py
 
 ### **c-a. After Forking, Set up PyCharm, Set up virtual environment, Install dependencies, Run Application**
   - If you do not have PyCharm and want to install [VS Code (Visual studio Code) go to c-b](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#c-b-after-forking-set-up-visual-studio-code-vs-code-set-up-virtual-environment-install-dependencies-run-application)
-Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
-Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed PyCharm [Download PyCharm Community for Windows](https://www.jetbrains.com/pycharm/download/?section=windows) OR [Download PyCharm Community for Mac](https://www.jetbrains.com/pycharm/download/?section=mac) OR [Download PyCharm Community for Linux](https://www.jetbrains.com/pycharm/download/?section=linux).
-Then you must open PyCharm:
+  - Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/). Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed PyCharm [Download PyCharm Community for Windows](https://www.jetbrains.com/pycharm/download/?section=windows) OR [Download PyCharm Community for Mac](https://www.jetbrains.com/pycharm/download/?section=mac) OR [Download PyCharm Community for Linux](https://www.jetbrains.com/pycharm/download/?section=linux).
+  - Then you must open PyCharm:
   - Make a new Project with these instructions: [Create a Python Project](https://www.jetbrains.com/help/pycharm/creating-empty-project.html)
   - Follow all steps including making sure a virtual environment is set up with the Python you installed.
   - Login the Git into the Python and use the Git Clone or fetch the repository of the Forked repository you made. [Forking PyCharm Help](https://www.jetbrains.com/help/pycharm/fork-github-projects.html)
@@ -355,10 +386,8 @@ python main.py
 
 ### **c-b. After Forking, Set up Visual Studio Code (VS Code), Set up virtual environment, Install dependencies, Run Application**
   - If you do not have VS Code (Visual studio Code) and want to install [PyCharm go to c-a](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#c-a-after-forking-set-up-pycharm-set-up-virtual-environment-install-dependencies-run-application)
-Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/).
-Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed VS Code [Download VS CODE (DOWNLOADS)](https://code.visualstudio.com/Download).
-Then read the Overview: [VSC Overview](https://code.visualstudio.com/docs/setup/setup-overview).
-Then you must open VS CODE:
+  - Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/). Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed VS Code [Download VS CODE (DOWNLOADS)](https://code.visualstudio.com/Download). Then read the Overview: [VSC Overview](https://code.visualstudio.com/docs/setup/setup-overview).
+  - Then you must open VS CODE:
   - INSTALL *all* [**EXTENTIONS for PYTHON + OTHERS**](https://code.visualstudio.com/docs/getstarted/extensions)
   - SETUP Article VSC based on OS: [Windows VSC](https://code.visualstudio.com/docs/setup/windows)  or [Linux](https://code.visualstudio.com/docs/setup/mac)  or [Linux](https://code.visualstudio.com/docs/setup/linux)
   - Make a new Project with these instructions: [Create a Python Project](https://www.jetbrains.com/help/pycharm/creating-empty-project.html)
@@ -446,9 +475,6 @@ python main.py
 - My Translation Applicaiton is a simple multi-language GUI translator built with Python that supports both online and local translation methods by using a database like SQL(sqlite).
 - It uses a dictionary-style approach, can connect to a free online API like Google Translate, and allows users to translate words or phrases across many languages and offers local support by importing in dicitonary .txt files to add to the SQL (sqlite) database.
 - The app handles Unicode fonts for languages such as lanauges that need support like Cyrillic which lets users maintain and export a history of translated words, and provides a clean interface for entering text, viewing results, editing data, and saving data.
-### More History Details?
-- Refer to the History links at the top of the **README.md** file.
-- It will send you hyperlinks to a Wikipedia page of the whole history behind it per each topic.
 
 ## **Introduction, Requirements, and Objectives**
 This document outlines the deliverables for a CS50 Capstone Final Project: a Translation Appolcaiton developed with Python, SQL(sqlite), IT/Cyber(email features), and exporting datas within a unified GUI. The project follows the Waterfall/Agile development model, progressing through defined phases: Requirements Analysis, System Design, Implementation, Testing, and Maintenance. This focuses on gathering detailed requirements, initial design, and prototyping, as well as developing functional modules and early versions of the gui. The project’s purpose is to create a centralized local and online tranlsation application, allowing users to translate words, sentences, or phrases in one application. Git will be used for version control, and testing(unit;auto;system;manual;integration) will ensure each component meets requirements. Deliverables include a fully functional translation game with intuitive GUI, featuring Admin Panel to allow the user to see the translation.db database (SQL)(sqlite) from the Dictionary, History, and Settings tab. Then the user will also have access to import or export the data.
@@ -479,7 +505,7 @@ This project uses Git for version control. Git will be used to track the progres
 - Click on the Actions to see all the Unit Tests run through GitHub actions by the (.yml) files.
   - Note: You can also see each Weekly Unit progress on Git through the "docs" folder where it shows per each week.
 ### Testing and Debugging
-- Unit Testing: Test each game module (Tic-Tac-Toe, Trivia, Breakout) for correctness.
+- Automated Testing: Test each game module for correctness.
 - Integration Testing: Ensure the main menu and individual game modules work seamlessly together.
 - System Testing: Test the full application to ensure the overall user experience is smooth.
 ### **Automated Testing and Manual Testing Instructions:**
@@ -521,7 +547,7 @@ python -m pytest tests/test_algorithms.py
 D:// ... directory of the project...
 python -m pytest
 ```
-3) **Test Data preparation**:
+3) **Manual Test Data preparation**:
 - Testing will be done through the “main” branch of the GitHub, test.py.
 - Manual Testing will be done through the “main” and other branches.
 - All test files should be located in: ```tests/...all test .py files here..." (Works for WIN; MAC; UBU)```
@@ -624,7 +650,7 @@ The use case diagram illustrates how users interact with the application: starti
 The activity diagram shows the flow of actions, starting from the application launch, progressing through the deicitonary tabs selection of Open Admin Panel, importing/exporting data, editing data, veiwing data, page changes.
 ### Class/UML Diagram
 - Put it here.....
-## Overview of Unit 1-8 Progress Conclusion
+## Overview of Progress and Conclusion
 ### Project Plan Goals:
 - Develop a application
 - Use a modular design for easy maintenance and future gui/tk additions.
