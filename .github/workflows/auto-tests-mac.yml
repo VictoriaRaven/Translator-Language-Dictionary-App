@@ -16,7 +16,7 @@ jobs:
     steps:
       # Step 1: Checkout the repository codes
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
         
       # Step 2: Install SDL2 (for pygame) 
       - name: Install SDL2 (for pygame)
@@ -25,7 +25,7 @@ jobs:
           
       # Step 3: Set up Python environment
       - name: Set up Python
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
 
