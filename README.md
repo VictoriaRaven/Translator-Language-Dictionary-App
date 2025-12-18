@@ -1,5 +1,5 @@
 # Translator-Language-Dictionary-App
-[![Static Badge](https://img.shields.io/badge/Documents-DocFiles-blue)](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/docs) [![Static Badge](https://img.shields.io/badge/Databases-dbTxts-blue)](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/data) [![Static Badge](https://img.shields.io/badge/Tests-AllTests-blue)](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/tests) [![Static Badge](https://img.shields.io/badge/History-TranslationMachines-purple)](https://en.wikipedia.org/wiki/History_of_machine_translation)
+[![Static Badge](https://img.shields.io/badge/Documents-DocFiles-blue)](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/tree/main/docs) [![Static Badge](https://img.shields.io/badge/Databases-dbTxts-blue)](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/tree/main/data) [![Static Badge](https://img.shields.io/badge/Tests-AllTests-blue)](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/tree/main/tests) [![Static Badge](https://img.shields.io/badge/History-TranslationMachines-purple)](https://en.wikipedia.org/wiki/History_of_machine_translation)
 
 ## Copyright Usage and License
 Regarding Copyright laws by GitHub, it states that a public repository without a license means that others must fork the repository to utilize and modify the code as the team retains all proprietary rights.
@@ -8,11 +8,12 @@ Links:
 - [GitHub Terms of Service](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service)
 
 ## 🎥 CS50 Video
-A link will be added after recording the final demonstration, as required by CS50 over here...
+- [CS50 Final Project Video Demonstration](https://youtu.be/f7c4AC6BHUo)
+- [VictoriaRaven/Translator-Language-Dictionary-App](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App)
 
 ## ⚠️ Important Notice
 
-This Project is a Basic Python GUI application of a Translator-Language-Dictionary-App. This uses the import of Tkinter (GUI: Graphical User Interface) library for Python and the Python Dictionary method through the (language).txt files uploaded. The user can input the english word or vice versa (incuding accents) and then it will translate the language and search for the word based on the user input and laws. I will gradually update this throughout my studies at UMGC. Git will be used for version control, and testing will ensure each component meets requirements. Deliverables include an intuitive GUI, featuring gui translaster app components and, an interactive buttons to export the dicitonary or translation histories as well as wother unique features. The development will be tracked through version control and tested using all types of testing including automated.
+This Project is a Basic Python GUI application of a Translator-Language-Dictionary-App. This uses the import of Tkinter (GUI: Graphical User Interface) library for Python and the Python Dictionary method through the (language).txt files uploaded. The user can input the english word or vice versa (incuding accents) and then it will translate the language and search for the word based on the user input and laws. I will gradually update this throughout my studies at UMGC. Git will be used for version control, and testing will ensure each component meets requirements. Deliverables include an intuitive GUI, featuring gui translaster app components and, an interactive buttons to export the dicitonary or translation histories as well as wother unique features. The development will be tracked through version controll, SDLC methods (like a CS capstone) and tested using all types of testing including automated.
 
 ### Languages Support (Main Language: English)
 - French
@@ -33,19 +34,21 @@ This Project is a Basic Python GUI application of a Translator-Language-Dictiona
   - **Victoria Lee** - *Project Manager / Technical Writer / Developer/ Git Lead (.py files) / Tester (GitHub Actions / Repo / ALL TESTS(Unit; Manual Tests; System; Auto))*
 
 ## Table of Contents (Key Parts Only)
-  * [**CS 50 Concepts Integrated**](#cs50-concepts-integrated)
-  * [**How to Set Up the Game**](#how-to-set-up-the-game)
-  * [**How to Navigate the GUI**](#how-to-navigate-the-translator-app-gui)
-  * [**History of Translation Machines**](#history-of-translation-machines)
-  * [**Introduction, Requirements, and Objectives**](#introduction-requirements-and-objectives)
-    + [Automated Testing and Manual Testing Instructions](automated-testing-and-manual-testing-instructions)
-    + [Overview of Unit 1-8 Progress Conclusion](#overview-of-unit-1-8-progress-conclusion)
-    + [User Guide](#user-guide-before-deployment)
-  * [**Acknowledgements**](#Acknowledgments)
+  * [**CS50 Video - Final**](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#-cs50-video)
+  * [**CS 50 Concepts Integrated**](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#cs50-concepts-integrated)
+  * [**CS50 Q and A - Project Requirements**](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#-cs50-project-questions-answers)
+  * [**How to Set Up the GUI**](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#how-to-set-up-the-gui)
+  * [**How to Navigate the GUI**](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#how-to-navigate-the-translator-app-gui)
+  * [**History of Translation Machines**](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#history-of-translation-machines)
+  * [**Introduction, Requirements, and Objectives**](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#introduction-requirements-and-objectives)
+    + [Automated Testing and Manual Testing Instructions](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#automated-testing-and-manual-testing-instructions)
+    + [Overview of Progress and Conclusion](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#overview-of-progress-and-conclusion)
+    + [User Guide](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#user-guide-before-deployment)
+  * [**Acknowledgements**](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#acknowledgments)
 
 ## 🌐 Overview
 A multi-language offline/online translator built with **Python**, **Tkinter**, **SQLite**, and modular architecture. This project is designed and documented according to **CS50’s 2025 final project expectations**. This desktop application allows users to translate words between English and several supported languages using:
-  - Offline dictionary files  
+  - Offline dictionary files (only with most common words people use often; 100)
   - An SQLite-powered dictionary  
   - Optional online translation (Free version Google API translator)  
   - History logging and export  
@@ -237,6 +240,7 @@ TranslatorApp (gui.py) → manages windows, tabs, events
 ```bash
 
 pip install -r requirements.txt
+pip install -r requirements-dev.txt
 python main.py
 
 ```
@@ -255,7 +259,7 @@ This project is designed to meet — and exceed — the expectations of the CS50
 - Testing Quality
 - SDLC
 
-## **How to Set Up the Game**
+## **How to Set Up the GUI**
 ### 0. Forking Repository
 This option is **ONLY** if you have a Git Account and are comfortable using Git to run the application. This is also for users who would like to add contributions to our game as well as per the GitHub policies previously mentioned in the Copyright / License Section. **Skip to 1)** if you do not want to use this method.
 - First, Login with your Git account
@@ -419,12 +423,13 @@ python main.py
     - Translate:  Translate the text to the selected language
     - Open Admin Panel:  Opens the Panel to the Dictionary; History; Settings tabs.
     - Translation appears below Admin Button if translated button is clicked and is translated.
-### Dictonary Tab
+### Dictionary Tab
 - Select Open Admin Panel from the main menu main.py
 - Selects the Dictionary tab from the Open Admin Panel
 - This shows ALL of the words in the translation.db dictionary currently there
 - The user can search the words in the dicitonary from search bar with serach and clear buttons
 - The user can export or import CSV to the dicitonary
+- The user can edit words
 - The user can Refresh the database manually if the user modified data
 - The user can allow 10,220,50, or 100 entries to appear in the dicitonary
 - The user can go to the Next or Prev pages of the dicitonary database
@@ -433,20 +438,17 @@ python main.py
 - Selects the History tab from the Open Admin Panel
 - This shows ALL of the words in the translation.db dictionary currently there
 - The user can search the words in the dicitonary from search bar with serach and clear buttons
-- The user can export or import CSV to the dicitonary
+- The user can export history Email(Outlook only), PDF, JSON, CSV
+- [Tutorial to Import UTF-8 EXCEL Data here](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#tutorial-to-import-utf-8-excel-data). 
 - The user can Refresh the database manually if the user modified data
+- The user can edit words
 - The user can allow 10,220,50, or 100 entries to appear in the dicitonary
 - The user can go to the Next or Prev pages of the dicitonary database
 ### Settings Tab
 - Select Open Admin Panel from the main menu main.py
 - Selects the Settings tab from the Open Admin Panel
-- This shows ALL of the words in the translation.db dictionary currently there
-- The user can search the words in the dicitonary from search bar with serach and clear buttons
-- The user can export or import CSV to the dicitonary
-- The user can Refresh the database manually if the user modified data
-- The user can allow 10,220,50, or 100 entries to appear in the dicitonary
-- The user can go to the Next or Prev pages of the dicitonary database
-- [Tutorial to Import UTF-8 EXCEL Data here](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#tutorial-to-import-utf-8-excel-data). 
+- The user can import the SQL lite datebase .db file using import with the .txt files
+- The user can toggle online or offline
 ### Exit
 - Select the X red button on the GUI
 - It will Exit the Translation Application GUI and exit the Python Application.
@@ -644,12 +646,8 @@ Automated testing was implemented using Python’s import frameworks to validate
 This portion is included in the document folder **"docs"** and the diagrams included in one of the sections.
 ### Start of the Implementation:
 - **Implementation Of GUI**: 
-### Use Case Diagram
-The use case diagram illustrates how users interact with the application: starting from launching the app, selecting a option from the main menu (main.py), and engaging with the mechanics.
-### Activity Diagram
-The activity diagram shows the flow of actions, starting from the application launch, progressing through the deicitonary tabs selection of Open Admin Panel, importing/exporting data, editing data, veiwing data, page changes.
-### Class/UML Diagram
-- Put it here.....
+### Class/UML/Use Case/Activity Diagrams
+The use case diagram illustrates how users interact with the application: starting from launching the app, selecting a option from the main menu (main.py), and engaging with the mechanics. The activity diagram shows the flow of actions, starting from the application launch, progressing through the deicitonary tabs selection of Open Admin Panel, importing/exporting data, editing data, veiwing data, page changes. The class and uml diagram is similar to the activity diagram but includes the classes, codes, and functions/methods and how it intreacts with each other.
 ## Overview of Progress and Conclusion
 ### Project Plan Goals:
 - Develop a application
@@ -680,7 +678,7 @@ The activity diagram shows the flow of actions, starting from the application la
 - Provide instructions for starting the application, selecting the buttons, dicitonary, serach, pages/exports/imports, and using UI features.
 - Include troubleshooting tips, known issues, and any additional features or options available
 - Refer to the docs folder section to access our User Guide version.
-- Link is here: [User Guide][(https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/docs)
+- Link is here: [User Guide](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/tree/main/docs)
 ### Deployment Goals:
 - Finalize the application after testing and bug fixes.
 - Ensure cross-platform compatibility and smooth performance on different devices.
