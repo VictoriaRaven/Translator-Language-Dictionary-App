@@ -278,12 +278,12 @@ OR
 ```
 This will allow you to download the Zip file or clone the repository successfully. If you have the Zip file extract it onto a Python IDE Directory folder of the new project, but you must have Python installed on your machine.
 ## **2. Options to Run Application**
-- **a)** [Run through a Python IDE](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#a-a-set-up-pycharm-set-up-a-virtual-environment-install-dependencies-run-application)
-- **b)** [Run through Python Terminal after setting up the virtual environment](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#b-set-up-a-virtual-environment-install-dependencies-run-application)
-- **c)** [Run through Python IDE after Forking Repository](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#c-after-forking-set-up-pycharm-set-up-virtual-environment-install-dependencies-run-application)
+- **a)** [Run through a Python IDE](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#a-a-set-up-pycharm-set-up-a-virtual-environment-install-dependencies-run-application)
+- **b)** [Run through Python Terminal after setting up the virtual environment](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#b-set-up-a-virtual-environment-install-dependencies-run-application)
+- **c)** [Run through Python IDE after Forking Repository](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#c-a-after-forking-set-up-pycharm-set-up-virtual-environment-install-dependencies-run-application)
 
 ### **a-a. Set up PyCharm, Set up a virtual environment, Install dependencies, Run Application**
-  - If you do not have PyCharm and want to install [VS Code (Visual studio Code) go to a-b](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#a-b-set-up-visual-studio-code-vs-code-set-up-a-virtual-environment-install-dependencies-run-application)
+  - If you do not have PyCharm and want to install [VS Code (Visual studio Code) go to a-b](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#a-b-set-up-visual-studio-code-vs-code-set-up-a-virtual-environment-install-dependencies-run-application)
   - Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/). Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed PyCharm [Download PyCharm Community for Windows](https://www.jetbrains.com/pycharm/download/?section=windows) OR [Download PyCharm Community for Mac](https://www.jetbrains.com/pycharm/download/?section=mac) OR [Download PyCharm Community for Linux](https://www.jetbrains.com/pycharm/download/?section=linux).
   - Then you must open PyCharm:
   - Make a new Project with these instructions: [Create a Python Project](https://www.jetbrains.com/help/pycharm/creating-empty-project.html)
@@ -309,7 +309,7 @@ python main.py
   - Then while staying on that file click on the **Run** button which is the Green Arrow.
 
 ### **a-b. Set up Visual Studio Code (VS Code), Set up a virtual environment, Install dependencies, Run Application**
-  - If you do not have VS Code (Visual studio Code) and want to install [PyCharm go to a-a](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#a-a-set-up-pycharm-set-up-a-virtual-environment-install-dependencies-run-application)
+  - If you do not have VS Code (Visual studio Code) and want to install [PyCharm go to a-a](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#a-a-set-up-pycharm-set-up-a-virtual-environment-install-dependencies-run-application)
   - Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/). Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed VS Code [Download VS CODE (DOWNLOADS)](https://code.visualstudio.com/Download). Then read the Overview: [VSC Overview](https://code.visualstudio.com/docs/setup/setup-overview).
   - Then you must open VS CODE:
   - INSTALL *all* [**EXTENTIONS for PYTHON + OTHERS**](https://code.visualstudio.com/docs/getstarted/extensions)
@@ -366,7 +366,7 @@ python main.py
 ```
 
 ### **c-a. After Forking, Set up PyCharm, Set up virtual environment, Install dependencies, Run Application**
-  - If you do not have PyCharm and want to install [VS Code (Visual studio Code) go to c-b](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#c-b-after-forking-set-up-visual-studio-code-vs-code-set-up-virtual-environment-install-dependencies-run-application)
+  - If you do not have PyCharm and want to install [VS Code (Visual studio Code) go to c-b](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#c-b-after-forking-set-up-visual-studio-code-vs-code-set-up-virtual-environment-install-dependencies-run-application)
   - Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/). Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed PyCharm [Download PyCharm Community for Windows](https://www.jetbrains.com/pycharm/download/?section=windows) OR [Download PyCharm Community for Mac](https://www.jetbrains.com/pycharm/download/?section=mac) OR [Download PyCharm Community for Linux](https://www.jetbrains.com/pycharm/download/?section=linux).
   - Then you must open PyCharm:
   - Make a new Project with these instructions: [Create a Python Project](https://www.jetbrains.com/help/pycharm/creating-empty-project.html)
@@ -389,7 +389,7 @@ python main.py
   - Then while staying on that file click on the **Run** button which is the Green Arrow.
 
 ### **c-b. After Forking, Set up Visual Studio Code (VS Code), Set up virtual environment, Install dependencies, Run Application**
-  - If you do not have VS Code (Visual studio Code) and want to install [PyCharm go to c-a](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#c-a-after-forking-set-up-pycharm-set-up-virtual-environment-install-dependencies-run-application)
+  - If you do not have VS Code (Visual studio Code) and want to install [PyCharm go to c-a](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#c-a-after-forking-set-up-pycharm-set-up-virtual-environment-install-dependencies-run-application)
   - Before running the application, make sure you have **Python** installed on your machine. You can download Python from the official website: [Download Python](https://www.python.org/downloads/). Once Python is installed, you'll need to install the dependencies for the project either through the PYTHON IDE terminal that you installed VS Code [Download VS CODE (DOWNLOADS)](https://code.visualstudio.com/Download). Then read the Overview: [VSC Overview](https://code.visualstudio.com/docs/setup/setup-overview).
   - Then you must open VS CODE:
   - INSTALL *all* [**EXTENTIONS for PYTHON + OTHERS**](https://code.visualstudio.com/docs/getstarted/extensions)
@@ -488,8 +488,8 @@ This document outlines the deliverables for a CS50 Capstone Final Project: a Tra
 ### Version Control with Git
 This project uses Git for version control. Git will be used to track the progress of the project, manage code changes, and ensure collaboration between developers. Every change made to the codebase will be tracked with commit messages, providing a clear history of the project's development. Here's how we manage code changes:
 #### Branching and Commit Process
-- Create a Branch: Each developer creates a separate feature branch for a specific task (e.g., name-of-team-member/MainMenu; name-of-team-member/TicTacToe.py, etc.).
-- Commit Changes: Developers commit incremental changes with descriptive commit messages (e.g., Added game over condition for TicTacToe.py, Triva.py, Breakout.py).
+- Create a Branch: Each developer creates a separate feature branch for a specific task
+- Commit Changes: Developers commit incremental changes with descriptive commit messages
 - Push Changes: After completing tasks in a remote branch that was created, developers push the branch to GitHub.
 - Pull Request (PR): Create a Pull Request for code review. Once approved, the changes are merged into the main branch.
 ### Code Review and Merge
@@ -518,7 +518,7 @@ This project uses Git for version control. Git will be used to track the progres
 - Go to [https://github.com/VictoriaRaven/Translator-Language-Dictionary-App](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App)
 - Go to Actions Tab
 - If Workflow is Disabled, Enable it
-- Click on the Workflow [1) Auto Run Tests For Mac with all push; Auto Run Tests For Windows with all push; Auto Run Tests For Ubuntu with all push ]
+- Click on the Workflow [1) Auto Run Tests For Mac with all push; Auto Run Tests For Windows with all push; Auto Run Tests For Ubuntu with all push ](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/actions)
 - Go to the right side of “This workflow has a workflow_dispatch event trigger.”
 - Click on Run Workflow
 - Make sure it’s on Main branch (the .yml files autoruns on separate branches even if run through main)
@@ -568,6 +568,7 @@ python -m pytest
 - Go to the docs to find a copy of the Excel/Sheets/table for manual testing. 
 - Or Go to the docs in to get the link to the Excel/Sheets/table for manual testing.
 - This is Manual Tests using the Excel/Sheets/table method
+- Docs Link to All Testing: [Here](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/tree/main/docs)
 1) **Steps/Procedures**:
 - Command line, terminal or PowerShell steps: 
 - Download the code from GitHub in the “main” branch of folder containing ```tests/...all test .py files here..." (Works for WIN; MAC; UBU)```. Refer to README.md for help.
@@ -645,7 +646,7 @@ Automated testing was implemented using Python’s import frameworks to validate
 ## Project Architecture
 This portion is included in the document folder **"docs"** and the diagrams included in one of the sections.
 ### Start of the Implementation:
-- **Implementation Of GUI**: 
+- **Implementation Of GUI**: All of it is in the DOCS folder. [HERE](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/tree/main/docs)
 ### Class/UML/Use Case/Activity Diagrams
 The use case diagram illustrates how users interact with the application: starting from launching the app, selecting a option from the main menu (main.py), and engaging with the mechanics. The activity diagram shows the flow of actions, starting from the application launch, progressing through the deicitonary tabs selection of Open Admin Panel, importing/exporting data, editing data, veiwing data, page changes. The class and uml diagram is similar to the activity diagram but includes the classes, codes, and functions/methods and how it intreacts with each other.
 ## Overview of Progress and Conclusion
@@ -686,13 +687,13 @@ The use case diagram illustrates how users interact with the application: starti
 - Monitor post-deployment performance and user feedback for future updates.
 
 ### Contact
-Feel free to pm me (VictoriaRaven) if you want to use my code under a specific license and without needing to fork my repository.
-## Contributing
-Please read [CONTRIBUTING.md](README.md) for details on our code
-of conduct, and the process for submitting pull requests to me.
+Feel free to pm me (VictoriaRaven) if you want to use my code under a specific license and without needing to fork my repository and also for details on our code
+of conduct, and the process for submitting pull requests to me if you wish to collaborate.
+
 ## Authors
   - **Victoria Lee** - [VictoriaRaven](https://github.com/VictoriaRaven)
-  - See also the list of [contributors](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md) who participated in this project.
+  - Contributers: None/NA
+
 ## Acknowledgments
 - [Google Scholar](https://scholar.google.com/)
 - [Python Doc](https://docs.python.org/3/)
