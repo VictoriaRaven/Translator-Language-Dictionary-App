@@ -10,6 +10,7 @@ Links:
 ## 🎥 CS50 Video
 - [CS50 Final Project Video Demonstration](https://youtu.be/f7c4AC6BHUo)
 - [VictoriaRaven/Translator-Language-Dictionary-App](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App)
+- [Link to my CS50 Assignments-Projects GitHub Submissions (No answer key and unique by me)](https://github.com/VictoriaRaven/CS50_Edx_Projects_Harvard)
 
 ## ⚠️ Important Notice
 
