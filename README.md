@@ -76,7 +76,7 @@ Supports:
   - **JSON export** (full history dump)  
   - **PDF export** using bundled DejaVu font (UTF-8 safe)
   - **Excel(.XLSX)** using UTF-8 safe written file in UTF format
-     - **Note:** EXCEL has a *specific way* of opening the data! Go to the [Tutorial to Import UTF-8 EXCEL Data here](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App/main/README.md#tutorial-to-import-utf-8-excel-data). 
+     - **Note:** EXCEL has a *specific way* of opening the data! Go to the [Tutorial to Import UTF-8 EXCEL Data here](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App?tab=readme-ov-file#tutorial-to-import-utf-8-excel-data). 
 #### Email Integration  
 Can open Outlook to send history exports or use a `mailto:` fallback.
 #### CS50-Friendly Modular Design  
