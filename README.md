@@ -12,6 +12,11 @@ Links:
 - [VictoriaRaven/Translator-Language-Dictionary-App](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App)
 - [Link to my CS50 Assignments-Projects GitHub Submissions (No answer key and unique by me)](https://github.com/VictoriaRaven/CS50_Edx_Projects_Harvard)
 
+## Certifications and Completions (Verified / Official)
+- [Harvard University Certificate - HarvardX - CS50x - Verified](https://certificates.cs50.io/8e1af2b8-c9b3-43d7-ad70-156766976cc6.pdf?size=letter)
+- [Harvard University Certificate - HarvardX - CS50x - edX Verified](https://certificates.cs50.io/8e1af2b8-c9b3-43d7-ad70-156766976cc6.pdf?size=letter)
+- [Harvard University Certificate - HarvardX - CS50x - Credly Verified Badge](https://www.credly.com/badges/6199a66f-721c-4dd8-8dcf-9354d4c4f706/public_url)
+
 ## ⚠️ Important Notice
 
 This Project is a Basic Python GUI application of a Translator-Language-Dictionary-App. This uses the import of Tkinter (GUI: Graphical User Interface) library for Python and the Python Dictionary method through the (language).txt files uploaded. The user can input the english word or vice versa (incuding accents) and then it will translate the language and search for the word based on the user input and laws. I will gradually update this throughout my studies at UMGC. Git will be used for version control, and testing will ensure each component meets requirements. Deliverables include an intuitive GUI, featuring gui translaster app components and, an interactive buttons to export the dicitonary or translation histories as well as wother unique features. The development will be tracked through version controll, SDLC methods (like a CS capstone) and tested using all types of testing including automated.
@@ -262,7 +267,7 @@ This project is designed to meet — and exceed — the expectations of the CS50
 
 ## **How to Set Up the GUI**
 ### 0. Forking Repository
-This option is **ONLY** if you have a Git Account and are comfortable using Git to run the application. This is also for users who would like to add contributions to our game as well as per the GitHub policies previously mentioned in the Copyright / License Section. **Skip to 1)** if you do not want to use this method.
+This option is **ONLY** if you have a Git Account and are comfortable using Git to run the application. This is also for users who would like to add contributions as per the GitHub policies previously mentioned in the Copyright / License Section. **Skip to 1)** if you do not want to use this method.
 - First, Login with your Git account
 - Go to the repository page of this project
 - Then click **Fork**
@@ -480,11 +485,11 @@ python main.py
 - The app handles Unicode fonts for languages such as lanauges that need support like Cyrillic which lets users maintain and export a history of translated words, and provides a clean interface for entering text, viewing results, editing data, and saving data.
 
 ## **Introduction, Requirements, and Objectives**
-This document outlines the deliverables for a CS50 Capstone Final Project: a Translation Appolcaiton developed with Python, SQL(sqlite), IT/Cyber(email features), and exporting datas within a unified GUI. The project follows the Waterfall/Agile development model, progressing through defined phases: Requirements Analysis, System Design, Implementation, Testing, and Maintenance. This focuses on gathering detailed requirements, initial design, and prototyping, as well as developing functional modules and early versions of the gui. The project’s purpose is to create a centralized local and online tranlsation application, allowing users to translate words, sentences, or phrases in one application. Git will be used for version control, and testing(unit;auto;system;manual;integration) will ensure each component meets requirements. Deliverables include a fully functional translation game with intuitive GUI, featuring Admin Panel to allow the user to see the translation.db database (SQL)(sqlite) from the Dictionary, History, and Settings tab. Then the user will also have access to import or export the data.
+This document outlines the deliverables for a CS50 Capstone Final Project: a Translation Appolcaiton developed with Python, SQL(sqlite), IT/Cyber(email features), and exporting datas within a unified GUI. The project follows the Waterfall/Agile development model, progressing through defined phases: Requirements Analysis, System Design, Implementation, Testing, and Maintenance. This focuses on gathering detailed requirements, initial design, and prototyping, as well as developing functional modules and early versions of the gui. The project’s purpose is to create a centralized local and online tranlsation application, allowing users to translate words, sentences, or phrases in one application. Git will be used for version control, and testing(unit;auto;system;manual;integration) will ensure each component meets requirements. Deliverables include a fully functional translation desktop applicaiton with intuitive GUI, featuring Admin Panel to allow the user to see the translation.db database (SQL)(sqlite) from the Dictionary, History, and Settings tab. Then the user will also have access to import or export the data.
 ### Testing/Debugging Requirements:
   - To track progress on each coding section, we will use Git for Version Control.
   -  Each process will include a Git commit section
-  - Each readme file will ensure that the user knows how the set the requirements of the software and run the application to play the games.
+  - Each readme file will ensure that the user knows how the set the requirements of the software and run the application.
   - Note: Refer to "doc" folder which is up-to-date with all our Technical Documentation per Unit (weeks: 1-8)
 ### Version Control with Git
 This project uses Git for version control. Git will be used to track the progress of the project, manage code changes, and ensure collaboration between developers. Every change made to the codebase will be tracked with commit messages, providing a clear history of the project's development. Here's how we manage code changes:
@@ -494,8 +499,8 @@ This project uses Git for version control. Git will be used to track the progres
 - Push Changes: After completing tasks in a remote branch that was created, developers push the branch to GitHub.
 - Pull Request (PR): Create a Pull Request for code review. Once approved, the changes are merged into the main branch.
 ### Code Review and Merge
-- If changing major game files `.py`, the Git Leader will get approvals from the PR and ensure code quality and functionality.
-- If changing minor files (txt, md, not game files, etc) the user(name of team) will get approvals from the PR and ensure code quality and functionality.
+- If changing major files `.py`, the Git Leader will get approvals from the PR and ensure code quality and functionality.
+- If changing minor files (txt, md, not files, etc) the user(name of team) will get approvals from the PR and ensure code quality and functionality.
 - Once the Git Leader/User(team) passes the review, it will be merged into the main branch.
 - The Project Manager and the Testers will ensure that each update is working and tested.
 - Developers will regularly pull the latest changes from the main branch to keep their feature branches up to date and avoid conflicts.
@@ -508,12 +513,12 @@ This project uses Git for version control. Git will be used to track the progres
 - Click on the Actions to see all the Unit Tests run through GitHub actions by the (.yml) files.
   - Note: You can also see each Weekly Unit progress on Git through the "docs" folder where it shows per each week.
 ### Testing and Debugging
-- Automated Testing: Test each game module for correctness.
-- Integration Testing: Ensure the main menu and individual game modules work seamlessly together.
+- Automated Testing: Test each module for correctness.
+- Integration Testing: Ensure the main menu and individual modules work seamlessly together.
 - System Testing: Test the full application to ensure the overall user experience is smooth.
 ### **Automated Testing and Manual Testing Instructions:**
 - Go to the file **"tests/((all test .py files here...))"** in the main branch and Run it. It should test all types of tests in that folder directory.
-- If it doesn't work, click on each method section for the game and run it one by one.
+- If it doesn't work, click on each method section for the and run it one by one.
 0)  **Steps/Procedures**:
 1) **GitHub Actions (tests) (Skip if you do not have access to the Repo)**:
 - Go to [https://github.com/VictoriaRaven/Translator-Language-Dictionary-App](https://github.com/VictoriaRaven/Translator-Language-Dictionary-App)
@@ -575,7 +580,7 @@ python -m pytest
 - Download the code from GitHub in the “main” branch of folder containing ```tests/...all test .py files here..." (Works for WIN; MAC; UBU)```. Refer to README.md for help.
 - Navigate to the project directory
 - Ensure installation of dependencies through the ```requirments.txt``` and ```requirements-dev.txt`` like shown in README.md
-- Run a sigle .py test in the directory of "tests/...all test .py files here..." (Works for WIN; MAC; UBU)
+- Run a single .py test in the directory of "tests/...all test .py files here..." (Works for WIN; MAC; UBU)
 ```bash
 D:// ... directory of the project...
 python -m pytest tests/test_algorithms.py
@@ -629,8 +634,8 @@ python -m pytest
 Automated testing was implemented using Python’s import frameworks to validate critical components of the other .py modules. Once verification is complete, the process will move into integration testing to ensure smooth interaction between components, including menu navigation, addtional features, and CS50's integraiton of lessons learned. System testing will follow, simulating real-world usage scenarios to confirm that the application performs reliably under typical and extreme conditions. Lastly, acceptance testing will be performed to validate that all project requirements have been met and the application aligns with stakeholder expectations. Testing outcomes will be documented in detail, and any issues uncovered will be addressed through a feedback loop prior to final deployment. This structured approach ensures a thorough and sequential validation of the system’s readiness for delivery. Through the testing approach, we will also use the software engineering techniques of Testing to ensure that each part is tested and debugged correctly.
 - **Next Phase Testing (Breakdown)**:
   - Future testing will follow the Waterfall/Agile methodology, starting after full system implementation.
-  - **Auto-Testing**: Verify core functionalities (AI decisions, answer validation, collision detection).
-  - **Integration Testing**: Ensure smooth interaction between components (menu navigation, game transitions, audio/visual responses).
+  - **Auto-Testing**: Verify core functionalities
+  - **Integration Testing**: Ensure smooth interaction between components
   - **System Testing**: Simulate real-world scenarios to confirm reliability under typical and extreme conditions.
   - **Acceptance/Manual Testing**: Validate that all project requirements are met and align with stakeholder expectations.
   - All testing outcomes will be documented, and issues will be addressed through a feedback loop before final deployment.
@@ -676,7 +681,7 @@ The use case diagram illustrates how users interact with the application: starti
 - Simulate real-world usage scenarios through system testing.
 - Conduct acceptance testing to confirm the application meets all project requirements and stakeholder expectations.
 ### User Guide (Before Deployment):
-- Develop a clear and concise **User Guide** detailing how to navigate the Game Hub.
+- Develop a clear and concise **User Guide** detailing how to navigate the Desktop GUI Translator App.
 - Provide instructions for starting the application, selecting the buttons, dicitonary, serach, pages/exports/imports, and using UI features.
 - Include troubleshooting tips, known issues, and any additional features or options available
 - Refer to the docs folder section to access our User Guide version.
@@ -697,6 +702,8 @@ of conduct, and the process for submitting pull requests to me if you wish to co
 
 ## Acknowledgments
 - [Google Scholar](https://scholar.google.com/)
+- [edX](https://www.edx.org/)
+- [HarvardX](https://harvardonline.harvard.edu/course/cs50-introduction-computer-science)
 - [Python Doc](https://docs.python.org/3/)
 - [GeeksforGeeks SDLC Waterfall Model](https://www.geeksforgeeks.org/software-development-life-cycle-sdlc/)
 - [GeeksforGeeks SDLC Agile Model](https://www.geeksforgeeks.org/software-engineering/agile-sdlc-software-development-life-cycle/)
