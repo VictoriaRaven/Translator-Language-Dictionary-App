@@ -14,7 +14,7 @@ Links:
 
 ## Certifications and Completions (Verified / Official)
 - [Harvard University Certificate - HarvardX - CS50x - Verified](https://certificates.cs50.io/8e1af2b8-c9b3-43d7-ad70-156766976cc6.pdf?size=letter)
-- [Harvard University Certificate - HarvardX - CS50x - edX Verified](https://certificates.cs50.io/8e1af2b8-c9b3-43d7-ad70-156766976cc6.pdf?size=letter)
+- [Harvard University Certificate - HarvardX - CS50x - edX Verified](https://courses.edx.org/certificates/1e090d3e39194330aeac3ecc56022a34?_gl=1*1dl2zmx*_gcl_aw*R0NMLjE3NjkxMjczMDAuQ2p3S0NBaUFzc2ZMQmhCREVpd0FjTHB3ZnJFM25WTGgwVjZsM3hKQ2FKV1NCenlKTzM1NkNGeU5FUUw3Z1VLb18yTVM4aG15ZkhrUEVob0N1d29RQXZEX0J3RQ..*_gcl_au*OTc5NDY1MDc5LjE3NjkxMjM3MTQ.*_ga*MzAwMTIxMDUyLjE3NjkxMjM3MTE.*_ga_D3KS4KMDT0*czE3NjkxMjczMDAkbzIkZzEkdDE3NjkxMjczMDYkajU0JGwwJGgw)
 - [Harvard University Certificate - HarvardX - CS50x - Credly Verified Badge](https://www.credly.com/badges/6199a66f-721c-4dd8-8dcf-9354d4c4f706/public_url)
 
 ## ⚠️ Important Notice
